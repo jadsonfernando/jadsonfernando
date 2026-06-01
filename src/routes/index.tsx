@@ -66,7 +66,7 @@ function Index() {
           {[
             ["+20", "anos em sala de aula"],
             ["+80", "palestras realizadas"],
-            ["+30", "instituições parceiras"],
+            ["+10K", "alunos impactados"],
             ["100%", "centrado no aluno"],
           ].map(([n, l]) => (
             <div key={l}>
