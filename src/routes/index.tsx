@@ -1,29 +1,133 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/SiteLayout";
+import jadsonAsset from "@/assets/jadson.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Jadson Fernando — Professor de Tecnologia" },
+      { name: "description", content: "Sobre o Prof. Jadson Fernando: educação centrada no aluno, metodologias ativas e avaliação formativa." },
+      { property: "og:title", content: "Jadson Fernando — Professor de Tecnologia" },
+      { property: "og:description", content: "Educação centrada no aluno, metodologias ativas e avaliação formativa." },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      {/* HERO */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-12 pt-12 lg:pt-20 pb-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div className="lg:col-span-7">
+            <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-3">
+              <span className="w-10 h-px bg-accent" /> Edição 01 — Sobre mim
+            </div>
+            <h1 className="font-display text-[clamp(3rem,9vw,8.5rem)] leading-[0.88] mt-8 text-balance">
+              Ensinar é<br />
+              <span className="italic text-accent">despertar</span> —<br />
+              não preencher.
+            </h1>
+            <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+              Sou <strong className="text-foreground font-medium">Jadson Fernando</strong>, professor de tecnologia,
+              palestrante e entusiasta de metodologias ativas e avaliação formativa.
+              Meu trabalho coloca o aluno no centro: do desenvolvimento pessoal à carreira.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link to="/convites" className="bg-foreground text-background px-6 py-3.5 text-sm uppercase tracking-[0.18em] hover:bg-accent hover:text-foreground transition-colors">
+                Convidar para palestra
+              </Link>
+              <Link to="/metodologias-ativas" className="border border-foreground px-6 py-3.5 text-sm uppercase tracking-[0.18em] hover:bg-foreground hover:text-background transition-colors">
+                Conhecer o método
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -inset-3 border border-accent translate-x-3 translate-y-3 -z-10" />
+            <img
+              src={jadsonAsset.url}
+              alt="Prof. Jadson Fernando"
+              className="w-full aspect-[3/4] object-cover grayscale-[0.15]"
+              loading="eager"
+            />
+            <div className="absolute -left-2 top-6 -rotate-90 origin-top-left text-[10px] uppercase tracking-[0.4em] text-muted-foreground hidden md:block">
+              Retrato · 2025
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MARQUEE STATS */}
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            ["+12", "anos em sala de aula"],
+            ["+80", "palestras realizadas"],
+            ["+30", "instituições parceiras"],
+            ["100%", "centrado no aluno"],
+          ].map(([n, l]) => (
+            <div key={l}>
+              <div className="font-display text-5xl md:text-6xl">{n}</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-2">{l}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PILARES */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-12 py-24">
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">02 — Pilares</div>
+            <h2 className="font-display text-4xl md:text-5xl mt-6 leading-tight">
+              Três princípios<br/>que orientam<br/><em className="text-accent">o trabalho.</em>
+            </h2>
+          </div>
+          <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-border">
+            {[
+              { n: "I", t: "Aluno no centro", d: "Cada decisão pedagógica parte do contexto, do interesse e do ritmo de quem aprende." },
+              { n: "II", t: "Metodologias ativas", d: "Sala de aula invertida, PBL, peer instruction e gamificação aplicadas ao cotidiano." },
+              { n: "III", t: "Avaliação formativa", d: "Avaliar para ensinar — feedback contínuo, devolutivas e rubricas transparentes." },
+              { n: "IV", t: "Tecnologia & carreira", d: "Inovação aplicada e desenvolvimento pessoal como eixos da formação." },
+            ].map((p) => (
+              <div key={p.n} className="bg-background p-8 hover:bg-card transition-colors">
+                <div className="font-display text-3xl text-accent">{p.n}</div>
+                <h3 className="font-display text-2xl mt-3">{p.t}</h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QUOTE */}
+      <section className="mx-auto max-w-5xl px-6 lg:px-12 py-20 text-center">
+        <div className="font-display text-3xl md:text-5xl italic leading-snug text-balance">
+          “A boa aula não é a que cabe no plano —<br className="hidden md:block"/> é a que cabe no aluno.”
+        </div>
+        <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mt-8">Jadson Fernando</div>
+      </section>
+
+      {/* CTA grid */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-12 pb-8">
+        <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+          {[
+            { to: "/eventos", k: "Agenda", t: "Eventos" },
+            { to: "/projetos", k: "Trabalhos", t: "Projetos" },
+            { to: "/convites", k: "Fale comigo", t: "Convites" },
+          ].map((c) => (
+            <Link key={c.to} to={c.to} className="group bg-background p-10 hover:bg-foreground hover:text-background transition-colors">
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground group-hover:text-background/60">{c.k}</div>
+              <div className="font-display text-4xl mt-4 flex items-baseline justify-between">
+                {c.t} <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
