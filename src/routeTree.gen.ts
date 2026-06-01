@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProjetosRouteImport } from './routes/projetos'
+import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
+import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as ConvitesRouteImport } from './routes/convites'
+import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ProjetosRoute = ProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetodologiasAtivasRoute = MetodologiasAtivasRouteImport.update({
+  id: '/metodologias-ativas',
+  path: '/metodologias-ativas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosRoute = EventosRouteImport.update({
+  id: '/eventos',
+  path: '/eventos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConvitesRoute = ConvitesRouteImport.update({
+  id: '/convites',
+  path: '/convites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvaliacaoFormativaRoute = AvaliacaoFormativaRouteImport.update({
+  id: '/avaliacao-formativa',
+  path: '/avaliacao-formativa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,102 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/convites': typeof ConvitesRoute
+  '/eventos': typeof EventosRoute
+  '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/projetos': typeof ProjetosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/convites': typeof ConvitesRoute
+  '/eventos': typeof EventosRoute
+  '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/projetos': typeof ProjetosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/convites': typeof ConvitesRoute
+  '/eventos': typeof EventosRoute
+  '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/projetos': typeof ProjetosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/avaliacao-formativa'
+    | '/convites'
+    | '/eventos'
+    | '/metodologias-ativas'
+    | '/projetos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/avaliacao-formativa'
+    | '/convites'
+    | '/eventos'
+    | '/metodologias-ativas'
+    | '/projetos'
+  id:
+    | '__root__'
+    | '/'
+    | '/avaliacao-formativa'
+    | '/convites'
+    | '/eventos'
+    | '/metodologias-ativas'
+    | '/projetos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AvaliacaoFormativaRoute: typeof AvaliacaoFormativaRoute
+  ConvitesRoute: typeof ConvitesRoute
+  EventosRoute: typeof EventosRoute
+  MetodologiasAtivasRoute: typeof MetodologiasAtivasRoute
+  ProjetosRoute: typeof ProjetosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/projetos': {
+      id: '/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metodologias-ativas': {
+      id: '/metodologias-ativas'
+      path: '/metodologias-ativas'
+      fullPath: '/metodologias-ativas'
+      preLoaderRoute: typeof MetodologiasAtivasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos': {
+      id: '/eventos'
+      path: '/eventos'
+      fullPath: '/eventos'
+      preLoaderRoute: typeof EventosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/convites': {
+      id: '/convites'
+      path: '/convites'
+      fullPath: '/convites'
+      preLoaderRoute: typeof ConvitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/avaliacao-formativa': {
+      id: '/avaliacao-formativa'
+      path: '/avaliacao-formativa'
+      fullPath: '/avaliacao-formativa'
+      preLoaderRoute: typeof AvaliacaoFormativaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +157,22 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AvaliacaoFormativaRoute: AvaliacaoFormativaRoute,
+  ConvitesRoute: ConvitesRoute,
+  EventosRoute: EventosRoute,
+  MetodologiasAtivasRoute: MetodologiasAtivasRoute,
+  ProjetosRoute: ProjetosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
