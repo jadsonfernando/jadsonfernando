@@ -64,7 +64,7 @@ function Index() {
       <section className="border-y border-border bg-card">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            ["+12", "anos em sala de aula"],
+            ["+20", "anos em sala de aula"],
             ["+80", "palestras realizadas"],
             ["+30", "instituições parceiras"],
             ["100%", "centrado no aluno"],
