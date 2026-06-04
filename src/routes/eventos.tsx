@@ -15,11 +15,9 @@ export const Route = createFileRoute("/eventos")({
 });
 
 const eventos = [
-  { d: "12.06", m: "Jun 2026", t: "Sala de aula invertida na prática", l: "SESI · Fortaleza", tag: "Palestra" },
-  { d: "03.07", m: "Jul 2026", t: "Avaliação formativa — feedback que ensina", l: "PUC · Online", tag: "Formação" },
-  { d: "22.08", m: "Ago 2026", t: "Tecnologia, inovação e carreira", l: "Campus Party · Recife", tag: "Keynote" },
-  { d: "14.09", m: "Set 2026", t: "Mentoria coletiva: protagonismo estudantil", l: "Instituto Êxito", tag: "Workshop" },
-  { d: "05.10", m: "Out 2026", t: "Metodologias ativas no Ensino Médio", l: "Colégio Santa Cecília", tag: "Formação" },
+  { d: "10·18·22", m: "Jun 2026", t: "Gemini Summit 2026", l: "Google · Online", tag: "Summit" },
+  { d: "13.06", m: "Jun 2026", t: "Seminário de Educação Empreendedora", l: "Escola do Futuro", tag: "Seminário" },
+  { d: "16·24", m: "Jun 2026", t: "IA na Educação — Formação de Professores", l: "EEAB", tag: "Formação" },
 ];
 
 function Page() {
