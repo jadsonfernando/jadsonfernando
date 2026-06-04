@@ -103,6 +103,42 @@ function Index() {
         </div>
       </section>
 
+      {/* MANIFESTO */}
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24">
+          <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-3">
+            <span className="w-10 h-px bg-accent" /> 03 — Manifesto
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl mt-6 leading-[0.95] text-balance">
+            O que <em className="text-accent">me move.</em>
+          </h2>
+          <div className="mt-12 space-y-7 text-lg md:text-xl leading-relaxed text-foreground/90 max-w-3xl">
+            <p>
+              Olhando para trás, percebo que a minha jornada nunca foi apenas sobre computadores,
+              códigos ou sistemas; sempre foi sobre <strong className="font-medium">pessoas e transformações</strong>.
+              Da monitoria de lógica na FATEC à coordenação de cursos técnicos estaduais,
+              passando pelas salas de universidades e institutos federais, meu propósito central
+              sempre foi o mesmo: traduzir a complexidade da tecnologia para abrir portas de
+              oportunidade real.
+            </p>
+            <p>
+              Não acredito em uma educação estática. Por isso, as metodologias ativas continuam
+              sendo o coração da minha prática pedagógica, mas hoje elas ganharam superpoderes:
+              eu as associo diretamente ao uso das <strong className="font-medium">Inteligências Artificiais</strong>.
+              Como multiplicador da Google Gemini Academy e Especialista em EPT, minha missão atual
+              é usar a IA para potencializar o protagonismo do aluno, personalizando o aprendizado
+              e preparando professores e estudantes para liderarem a maior revolução tecnológica
+              da nossa era.
+            </p>
+            <p>
+              A tecnologia avança em ritmo exponencial, mas o coração da transformação continua
+              sendo humano. E eu sigo aqui, na linha de frente, pronto para o próximo código,
+              para a próxima aula e para a próxima revolução.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* QUOTE */}
       <section className="mx-auto max-w-5xl px-6 lg:px-12 py-20 text-center">
         <div className="font-display text-3xl md:text-5xl italic leading-snug text-balance">
@@ -110,6 +146,7 @@ function Index() {
         </div>
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mt-8">Jadson Fernando</div>
       </section>
+
 
       {/* CTA grid */}
       <section className="mx-auto max-w-7xl px-6 lg:px-12 pb-8">
