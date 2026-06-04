@@ -15,9 +15,12 @@ export const Route = createFileRoute("/eventos")({
 });
 
 const eventos = [
-  { d: "10·18·22", m: "Jun 2026", t: "Gemini Summit 2026", l: "Google · Online", tag: "Summit" },
+  { d: "10.06", m: "Jun 2026", t: "Gemini Summit 2026", l: "Google · Online", tag: "Summit" },
   { d: "13.06", m: "Jun 2026", t: "Seminário de Educação Empreendedora", l: "Escola do Futuro", tag: "Seminário" },
-  { d: "16·24", m: "Jun 2026", t: "IA na Educação — Formação de Professores", l: "EEAB", tag: "Formação" },
+  { d: "16.06", m: "Jun 2026", t: "IA na Educação — Formação de Professores", l: "EEAB", tag: "Formação" },
+  { d: "18.06", m: "Jun 2026", t: "Gemini Summit 2026", l: "Google · Online", tag: "Summit" },
+  { d: "22.06", m: "Jun 2026", t: "Gemini Summit 2026", l: "Google · Online", tag: "Summit" },
+  { d: "24.06", m: "Jun 2026", t: "IA na Educação — Formação de Professores", l: "EEAB", tag: "Formação" },
 ];
 
 function Page() {
