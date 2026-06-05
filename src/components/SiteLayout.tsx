@@ -2,8 +2,7 @@ import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 const nav = [
-  { to: "/", label: "Sobre mim" },
-  { to: "/eventos", label: "Eventos" },
+  { to: "/", label: "Sobre" },
   { to: "/metodologias-ativas", label: "Metodologias Ativas" },
   { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
   { to: "/projetos", label: "Projetos" },
