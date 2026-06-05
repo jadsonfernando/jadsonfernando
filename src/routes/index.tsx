@@ -38,7 +38,7 @@ function Index() {
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link to="/convites" className="bg-foreground text-background px-6 py-3.5 text-sm uppercase tracking-[0.18em] hover:bg-accent hover:text-foreground transition-colors">
-                Convidar para palestra
+                Convites para eventos
               </Link>
               <Link to="/metodologias-ativas" className="border border-foreground px-6 py-3.5 text-sm uppercase tracking-[0.18em] hover:bg-foreground hover:text-background transition-colors">
                 Conhecer o método
