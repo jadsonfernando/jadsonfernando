@@ -117,22 +117,21 @@ function Index() {
             <p>
               Olhando para trás, percebo que a minha jornada nunca foi apenas sobre computadores,
               códigos ou sistemas; sempre foi sobre <strong className="font-medium">pessoas e transformações</strong>.
-              Da monitoria de lógica na FATEC à coordenação de cursos técnicos estaduais,
-              passando pelas salas de universidades e institutos federais, meu propósito central
-              sempre foi o mesmo: traduzir a complexidade da tecnologia para abrir portas de
-              oportunidade real.
+              Da monitoria de lógica na FATEC à coordenação de cursos técnicos e superior,
+              passando por salas de institutos e universidades, meu propósito central sempre foi
+              o mesmo: traduzir a complexidade da tecnologia para abrir portas de oportunidade real.
             </p>
             <p>
-              Não acredito em uma educação estática. Por isso, as metodologias ativas continuam
+              Não acredito em uma educação estática. Por isso, <em>'metodologias ativas'</em> continuam
               sendo o coração da minha prática pedagógica, mas hoje elas ganharam superpoderes:
-              eu as associo diretamente ao uso das <strong className="font-medium">Inteligências Artificiais</strong>.
-              Como multiplicador da Google Gemini Academy e Especialista em EPT, minha missão atual
-              é usar a IA para potencializar o protagonismo do aluno, personalizando o aprendizado
-              e preparando professores e estudantes para liderarem a maior revolução tecnológica
-              da nossa era.
+              associo-as diretamente ao uso das <strong className="font-medium">Inteligências Artificiais</strong>.
+              Como especialista em EPT e multiplicador da Google Gemini Academy, minha missão atual
+              é usar ferramentas de tecnologia e inovação para potencializar o protagonismo do aluno,
+              personalizando o aprendizado e preparando professores e estudantes para liderarem a
+              maior revolução tecnológica da nossa era.
             </p>
             <p>
-              A tecnologia avança em ritmo exponencial, mas o coração da transformação continua
+              A tecnologia avança de forma exponencial, mais o coração da transformação continua
               sendo humano. E eu sigo aqui, na linha de frente, pronto para o próximo código,
               para a próxima aula e para a próxima revolução.
             </p>
