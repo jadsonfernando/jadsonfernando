@@ -29,7 +29,7 @@ function Page() {
       <PageShell
         kicker="02 — Eventos"
         title="Onde estarei. Onde estive."
-        lede="Palestras, formações e encontros em escolas, universidades e eventos de inovação. Quer me ter no seu evento? Mande um convite."
+        lede="Eventos de Inovação e Tecnologia, Workshops, Clínicas e Oficinas Tecnológicas, Palestras e Curadoria."
       >
         <div className="border-t border-border">
           {eventos.map((e) => (
