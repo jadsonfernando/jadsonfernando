@@ -84,7 +84,7 @@ function Index() {
           <div className="md:col-span-4">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">02 — Pilares</div>
             <h2 className="font-display text-4xl md:text-5xl mt-6 leading-tight">
-              Três princípios<br/>que orientam<br/><em className="text-accent">o trabalho.</em>
+              Quatro princípios<br/>que orientam<br/><em className="text-accent">o trabalho.</em>
             </h2>
           </div>
           <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-border">
