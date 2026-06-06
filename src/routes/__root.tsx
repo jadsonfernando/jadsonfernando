@@ -78,20 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Jadson Fernando" },
-      { name: "description", content: "Professor & Pesquisador
-Educação Profissional e Tecnológica
-Google Gemini Academy" },
+      { name: "description", content: "Professor & Pesquisador · Educação Profissional e Tecnológica · Google Gemini Academy" },
       { name: "author", content: "Jadson Fernando" },
       { property: "og:title", content: "Jadson Fernando" },
-      { property: "og:description", content: "Professor & Pesquisador
-Educação Profissional e Tecnológica
-Google Gemini Academy" },
+      { property: "og:description", content: "Professor & Pesquisador · Educação Profissional e Tecnológica · Google Gemini Academy" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Jadson Fernando" },
-      { name: "twitter:description", content: "Professor & Pesquisador
-Educação Profissional e Tecnológica
-Google Gemini Academy" },
+      { name: "twitter:description", content: "Professor & Pesquisador · Educação Profissional e Tecnológica · Google Gemini Academy" },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/966e2602-e5cf-4629-8c31-70a7e1670864" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/966e2602-e5cf-4629-8c31-70a7e1670864" },
     ],
