@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
+import jadsonConvitesAsset from "@/assets/jadson-convites.jpg.asset.json";
 
 export const Route = createFileRoute("/convites")({
   head: () => ({
@@ -44,6 +45,20 @@ function Page() {
                 </div>
               </div>
             ))}
+
+            {/* Retrato discreto */}
+            <div className="relative pt-6">
+              <div className="absolute -inset-2 border border-accent translate-x-2 translate-y-2 -z-10" />
+              <img
+                src={jadsonConvitesAsset.url}
+                alt="Prof. Jadson Fernando"
+                loading="lazy"
+                className="w-full aspect-[3/4] object-cover grayscale-[0.2]"
+              />
+              <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                Jadson Fernando · Retrato
+              </div>
+            </div>
           </div>
 
           {/* FORM */}
