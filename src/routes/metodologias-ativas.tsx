@@ -28,7 +28,7 @@ function Page() {
     <SiteLayout>
       <PageShell
         kicker="03 — Metodologias Ativas"
-        title="O estudante — ativo mais precioso do processo."
+        title="Ativo mais precioso do processo — o estudante."
         lede="Métodos que substituem a passividade pela autoria. Aqui, ensinar é projetar experiências em que aprender faz sentido."
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
