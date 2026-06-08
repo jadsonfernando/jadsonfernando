@@ -85,8 +85,8 @@ export function SiteFooter() {
         </div>
         <div className="space-y-1 text-muted-foreground">
           <div className="uppercase text-xs tracking-[0.2em] text-foreground mb-3">Contato</div>
-          <div>contato@jadsonfernando.com.br</div>
-          <div>Palestras · Mentorias · Formações</div>
+          <div>jadson.langkammer@educacao.mg.gov.br</div>
+          <div>Aulas, Oficinas, Palestras</div>
         </div>
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
