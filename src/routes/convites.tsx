@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
+import jadsonConvitesAsset from "@/assets/jadson-convites.jpg.asset.json";
 
 export const Route = createFileRoute("/convites")({
   head: () => ({
