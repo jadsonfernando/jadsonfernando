@@ -32,23 +32,23 @@ function Page() {
         title="Vamos construir juntos?"
         lede="Conte sobre o evento, a escola ou o projeto. Respondo pessoalmente em até dois dias úteis."
       >
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div className="grid md:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* FORMATOS */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="md:col-span-5 flex flex-col gap-6">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Formatos</div>
             {formatos.map((f) => (
               <div key={f.t} className="flex gap-5 border-b border-border pb-5">
-                <div className="font-display text-3xl text-accent">{f.n}</div>
-                <div>
-                  <div className="font-display text-2xl">{f.t}</div>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{f.d}</p>
+                <div className="font-display text-3xl text-accent shrink-0">{f.n}</div>
+                <div className="min-w-0">
+                  <div className="font-display text-2xl leading-tight">{f.t}</div>
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed text-pretty">{f.d}</p>
                 </div>
               </div>
             ))}
 
-            {/* Retrato discreto */}
-            <figure className="relative mt-10 w-40 sm:w-48 lg:w-56 ml-0">
-              <div className="absolute -inset-1.5 border border-accent translate-x-1.5 translate-y-1.5 -z-10" />
+            {/* Retrato discreto — alinhado ao fim da coluna */}
+            <figure className="relative mt-auto pt-6 w-40 sm:w-44 lg:w-48 self-start">
+              <div className="absolute inset-x-0 top-6 bottom-0 border border-accent translate-x-1.5 translate-y-1.5 -z-10" />
               <img
                 src={jadsonConvitesAsset.url}
                 alt="Prof. Jadson Fernando"
@@ -63,7 +63,7 @@ function Page() {
 
           {/* FORM */}
           <form
-            className="lg:col-span-7 bg-card p-8 lg:p-12 border border-border space-y-6"
+            className="md:col-span-7 bg-card p-8 lg:p-12 border border-border space-y-6 self-start"
             onSubmit={(e) => { e.preventDefault(); setSent(true); }}
           >
             {sent ? (
