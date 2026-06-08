@@ -47,18 +47,18 @@ function Page() {
             ))}
 
             {/* Retrato discreto */}
-            <div className="relative pt-6">
-              <div className="absolute -inset-2 border border-accent translate-x-2 translate-y-2 -z-10" />
+            <figure className="relative mt-10 max-w-[16rem]">
+              <div className="absolute -inset-1.5 border border-accent translate-x-1.5 translate-y-1.5 -z-10" />
               <img
                 src={jadsonConvitesAsset.url}
                 alt="Prof. Jadson Fernando"
                 loading="lazy"
-                className="w-full aspect-[3/4] object-cover grayscale-[0.2]"
+                className="w-full aspect-[3/4] object-cover grayscale-[0.25]"
               />
-              <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Jadson Fernando · Retrato
-              </div>
-            </div>
+              <figcaption className="mt-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                Jadson Fernando
+              </figcaption>
+            </figure>
           </div>
 
           {/* FORM */}
