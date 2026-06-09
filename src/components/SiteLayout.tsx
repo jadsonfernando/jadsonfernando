@@ -100,6 +100,36 @@ export function SiteFooter() {
               Falar com o Profe!
             </a>
           </div>
+          <div className="flex items-center gap-3 pt-4">
+            <a
+              href="http://instagram.com/jadsonfernandofc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+            >
+              <Instagram size={16} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jadsonfernando/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+            >
+              <Linkedin size={16} />
+            </a>
+            <a
+              href="http://lattes.cnpq.br/4145159773500733"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Currículo Lattes"
+              title="Currículo Lattes"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+            >
+              <GraduationCap size={16} />
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
