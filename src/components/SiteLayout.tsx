@@ -1,5 +1,6 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { Instagram, Linkedin, GraduationCap } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Sobre" },
