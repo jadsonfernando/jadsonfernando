@@ -73,9 +73,12 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-12 grid md:grid-cols-3 gap-8 text-sm">
         <div>
           <div className="font-display text-xl">Jadson Fernando</div>
-          <p className="text-muted-foreground mt-2 max-w-xs">
-            Professor, palestrante e entusiasta de metodologias ativas e avaliação formativa.
-          </p>
+          <p className="text-muted-foreground mt-1">Professor e Pesquisador</p>
+          <div className="text-muted-foreground mt-4 space-y-1">
+            <div>GEG Brasil</div>
+            <div>Google Workspace for Education</div>
+            <div>Google Gemini Academy</div>
+          </div>
         </div>
         <div className="space-y-1 text-muted-foreground">
           <div className="uppercase text-xs tracking-[0.2em] text-foreground mb-3">Navegar</div>
