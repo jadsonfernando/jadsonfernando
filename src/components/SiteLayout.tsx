@@ -96,7 +96,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground text-background px-4 py-2 text-xs uppercase tracking-[0.18em] hover:bg-foreground/90 transition-colors"
             >
-              Aulas, Oficinas, Palestras
+              Falar com a minha Assistente
             </a>
           </div>
         </div>
