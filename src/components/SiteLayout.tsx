@@ -89,7 +89,16 @@ export function SiteFooter() {
         <div className="space-y-1 text-muted-foreground">
           <div className="uppercase text-xs tracking-[0.2em] text-foreground mb-3">Contato</div>
           <div>jadson.langkammer@educacao.mg.gov.br</div>
-          <div>Aulas, Oficinas, Palestras</div>
+          <div className="pt-2">
+            <a
+              href="https://wa.me/5533987138346?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20Jadson%20sobre%20aulas%2C%20oficinas%20ou%20palestras."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground text-background px-4 py-2 text-xs uppercase tracking-[0.18em] hover:bg-foreground/90 transition-colors"
+            >
+              Aulas, Oficinas, Palestras
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
