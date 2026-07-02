@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
+import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
 import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as ConvitesRouteImport } from './routes/convites'
 import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
@@ -24,6 +25,11 @@ const ProjetosRoute = ProjetosRouteImport.update({
 const MetodologiasAtivasRoute = MetodologiasAtivasRouteImport.update({
   id: '/metodologias-ativas',
   path: '/metodologias-ativas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormacaoProfessoresRoute = FormacaoProfessoresRouteImport.update({
+  id: '/formacao-professores',
+  path: '/formacao-professores',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventosRoute = EventosRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
+  '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
+  '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
+  '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/avaliacao-formativa'
     | '/convites'
     | '/eventos'
+    | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/avaliacao-formativa'
     | '/convites'
     | '/eventos'
+    | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/avaliacao-formativa'
     | '/convites'
     | '/eventos'
+    | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   AvaliacaoFormativaRoute: typeof AvaliacaoFormativaRoute
   ConvitesRoute: typeof ConvitesRoute
   EventosRoute: typeof EventosRoute
+  FormacaoProfessoresRoute: typeof FormacaoProfessoresRoute
   MetodologiasAtivasRoute: typeof MetodologiasAtivasRoute
   ProjetosRoute: typeof ProjetosRoute
 }
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/metodologias-ativas'
       fullPath: '/metodologias-ativas'
       preLoaderRoute: typeof MetodologiasAtivasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formacao-professores': {
+      id: '/formacao-professores'
+      path: '/formacao-professores'
+      fullPath: '/formacao-professores'
+      preLoaderRoute: typeof FormacaoProfessoresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/eventos': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AvaliacaoFormativaRoute: AvaliacaoFormativaRoute,
   ConvitesRoute: ConvitesRoute,
   EventosRoute: EventosRoute,
+  FormacaoProfessoresRoute: FormacaoProfessoresRoute,
   MetodologiasAtivasRoute: MetodologiasAtivasRoute,
   ProjetosRoute: ProjetosRoute,
 }
