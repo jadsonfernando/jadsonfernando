@@ -6,6 +6,7 @@ const nav = [
   { to: "/", label: "Sobre" },
   { to: "/metodologias-ativas", label: "Metodologias Ativas" },
   { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
+  { to: "/formacao-professores", label: "Formação Professores" },
   { to: "/projetos", label: "Projetos" },
   { to: "/convites", label: "Convites" },
 ] as const;
