@@ -39,30 +39,30 @@
 
 :root {
   --radius: 0.25rem;
-  /* Editorial palette — warm paper, deep ink, ochre accent */
-  --paper: oklch(0.965 0.012 75);
-  --ink: oklch(0.18 0.012 60);
-  --ochre: oklch(0.72 0.13 60);
-  --rust: oklch(0.55 0.14 40);
+  /* Editorial palette — navy-forward blues, cool paper, marine accent */
+  --paper: oklch(0.97 0.012 240);
+  --ink: oklch(0.22 0.06 250);
+  --ochre: oklch(0.48 0.14 250);
+  --rust: oklch(0.32 0.11 250);
 
   --background: var(--paper);
   --foreground: var(--ink);
-  --card: oklch(0.985 0.008 80);
+  --card: oklch(0.985 0.008 240);
   --card-foreground: var(--ink);
   --popover: var(--paper);
   --popover-foreground: var(--ink);
   --primary: var(--ink);
   --primary-foreground: var(--paper);
-  --secondary: oklch(0.92 0.018 75);
+  --secondary: oklch(0.92 0.022 240);
   --secondary-foreground: var(--ink);
-  --muted: oklch(0.92 0.015 75);
-  --muted-foreground: oklch(0.45 0.018 60);
+  --muted: oklch(0.92 0.02 240);
+  --muted-foreground: oklch(0.45 0.04 245);
   --accent: var(--ochre);
-  --accent-foreground: var(--ink);
+  --accent-foreground: var(--paper);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: var(--paper);
-  --border: oklch(0.86 0.018 70);
-  --input: oklch(0.86 0.018 70);
+  --border: oklch(0.86 0.025 240);
+  --input: oklch(0.86 0.025 240);
   --ring: var(--ochre);
 
   --font-display: "Fraunces", Georgia, serif;
