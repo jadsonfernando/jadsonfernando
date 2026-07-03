@@ -41,12 +41,6 @@ export function SiteHeader() {
             );
           })}
         </nav>
-        <Link
-          to="/convites"
-          className="text-xs uppercase tracking-[0.18em] border border-foreground px-4 py-2.5 hover:bg-foreground hover:text-background transition-colors"
-        >
-          Convidar
-        </Link>
       </div>
       {/* mobile nav */}
       <nav className="lg:hidden border-t border-border overflow-x-auto">
