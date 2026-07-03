@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell } from "@/components/SiteLayout";
+import { SiteLayout, PageShell } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/formacao-professores")({
   head: () => ({
@@ -45,6 +45,7 @@ const formatos = [
 
 function FormacaoProfessores() {
   return (
+    <SiteLayout>
     <PageShell
       kicker="Edição 07 · Formação"
       title="Formação de Professores."
