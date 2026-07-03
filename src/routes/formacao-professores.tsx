@@ -79,5 +79,6 @@ function FormacaoProfessores() {
         </div>
       </div>
     </PageShell>
+    </SiteLayout>
   );
 }
