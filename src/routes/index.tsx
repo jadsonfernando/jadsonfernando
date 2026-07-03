@@ -33,8 +33,8 @@ function Index() {
             <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
               Sou <strong className="text-foreground font-medium">Jadson Fernando</strong>, professor de tecnologia
               e apaixonado por pesquisa. Minha metodologia coloca o aluno no centro —
-              do desenvolvimento pessoal à carreira. Sou especialista em EPT e mentor do projeto
-              <strong className="text-foreground font-medium"> developME®</strong>.
+              do desenvolvimento pessoal à carreira. Sou especialista em EPT e lidero um
+              <strong className="text-foreground font-medium"> projeto de multidesenvolvimento</strong>.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link to="/convites" className="bg-foreground text-background px-6 py-3.5 text-sm uppercase tracking-[0.18em] hover:bg-accent hover:text-foreground transition-colors">
