@@ -46,39 +46,39 @@ const formatos = [
 function FormacaoProfessores() {
   return (
     <SiteLayout>
-    <PageShell
-      kicker="Edição 07 · Formação"
-      title="Formação de Professores."
-      lede="Trilhas desenhadas para que professores experimentem, adaptem e sustentem novas práticas — não apenas conheçam ferramentas."
-    >
-      <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
-        {trilhas.map((t) => (
-          <div key={t.n} className="border-t border-border pt-6">
-            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t.n}</div>
-            <h3 className="font-display text-3xl mt-3">{t.title}</h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">{t.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-24">
-        <div className="text-xs uppercase tracking-[0.25em] text-accent-foreground/80">
-          <span className="inline-block w-8 h-px bg-accent align-middle mr-3" />
-          Formatos
-        </div>
-        <h2 className="font-display text-4xl md:text-5xl mt-6 max-w-2xl text-balance">
-          Do encontro pontual à jornada continuada.
-        </h2>
-        <div className="mt-10 grid md:grid-cols-2 gap-x-16 gap-y-10">
-          {formatos.map((f) => (
-            <div key={f.title}>
-              <h3 className="font-display text-2xl">{f.title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{f.desc}</p>
+      <PageShell
+        kicker="Edição 07 · Formação"
+        title="Formação de Professores."
+        lede="Trilhas desenhadas para que professores experimentem, adaptem e sustentem novas práticas — não apenas conheçam ferramentas."
+      >
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
+          {trilhas.map((t) => (
+            <div key={t.n} className="border-t border-border pt-6">
+              <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">{t.n}</div>
+              <h3 className="font-display text-3xl mt-3 text-foreground">{t.title}</h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">{t.desc}</p>
             </div>
           ))}
         </div>
-      </div>
-    </PageShell>
+
+        <div className="mt-24">
+          <div className="text-[11px] uppercase tracking-[0.25em] text-accent-foreground/80">
+            <span className="inline-block w-8 h-px bg-accent align-middle mr-3" />
+            Formatos
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl mt-6 max-w-2xl text-balance">
+            Do encontro pontual à jornada continuada.
+          </h2>
+          <div className="mt-10 grid md:grid-cols-2 gap-x-16 gap-y-10">
+            {formatos.map((f) => (
+              <div key={f.title}>
+                <h3 className="font-display text-2xl text-foreground">{f.title}</h3>
+                <p className="mt-3 text-muted-foreground leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </PageShell>
     </SiteLayout>
   );
 }

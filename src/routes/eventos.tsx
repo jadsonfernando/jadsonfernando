@@ -36,12 +36,12 @@ function Page() {
             <article key={`${e.d}-${e.t}`} className="grid md:grid-cols-12 gap-6 py-8 border-b border-border items-baseline group hover:bg-card -mx-4 px-4 transition-colors">
 
               <div className="md:col-span-2">
-                <div className="font-display text-4xl">{e.d}</div>
+                <div className="font-display text-4xl text-foreground">{e.d}</div>
                 <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mt-1">{e.m}</div>
               </div>
               <div className="md:col-span-7">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-accent-foreground/70">{e.tag}</div>
-                <h3 className="font-display text-2xl md:text-3xl mt-1">{e.t}</h3>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-accent">{e.tag}</div>
+                <h3 className="font-display text-2xl md:text-3xl mt-1 text-foreground">{e.t}</h3>
               </div>
               <div className="md:col-span-3 text-sm text-muted-foreground md:text-right">{e.l}</div>
             </article>

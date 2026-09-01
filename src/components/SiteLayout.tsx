@@ -14,11 +14,11 @@ const nav = [
 export function SiteHeader() {
   const path = useRouterState({ select: (s) => s.location.pathname });
   return (
-    <header className="border-b border-border bg-background/80 backdrop-blur sticky top-0 z-50">
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-5 flex items-center justify-between gap-8">
         <Link to="/" className="flex items-baseline gap-2 group">
-          <span className="font-display text-2xl tracking-tight">Jadson Fernando</span>
-          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground hidden sm:inline">
+          <span className="font-display text-2xl tracking-tight text-foreground">Jadson Fernando</span>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hidden sm:inline">
             · prof.
           </span>
         </Link>
@@ -29,7 +29,7 @@ export function SiteHeader() {
               <Link
                 key={n.to}
                 to={n.to}
-                className={`relative py-1 transition-colors hover:text-foreground ${
+                className={`relative py-1 transition-colors hover:text-foreground uppercase tracking-wider text-[11px] ${
                   active ? "text-foreground" : "text-muted-foreground"
                 }`}
               >
@@ -43,7 +43,7 @@ export function SiteHeader() {
         </nav>
       </div>
       {/* mobile nav */}
-      <nav className="lg:hidden border-t border-border overflow-x-auto">
+      <nav className="lg:hidden border-t border-border/50 overflow-x-auto">
         <div className="flex gap-5 px-6 py-3 text-xs whitespace-nowrap">
           {nav.map((n) => {
             const active = n.to === "/" ? path === "/" : path.startsWith(n.to);
@@ -65,32 +65,32 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border mt-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-12 grid md:grid-cols-3 gap-8 text-sm">
+    <footer className="border-t border-border mt-0 bg-card">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12 text-sm">
         <div>
-          <div className="font-display text-xl">Jadson Fernando</div>
-          <p className="text-muted-foreground mt-1">Professor e Pesquisador</p>
-          <div className="text-muted-foreground mt-4 space-y-1">
+          <div className="font-display text-2xl text-foreground">Jadson Fernando</div>
+          <p className="text-muted-foreground mt-2">Professor e Pesquisador</p>
+          <div className="text-muted-foreground mt-6 space-y-2 text-sm">
             <div>GEG Brasil</div>
             <div>Google Workspace for Education</div>
             <div>Google Gemini Academy</div>
           </div>
         </div>
-        <div className="space-y-1 text-muted-foreground">
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground mb-3">Navegar</div>
+        <div className="space-y-2 text-muted-foreground">
+          <div className="uppercase text-[11px] tracking-[0.2em] text-foreground mb-4">Navegar</div>
           {nav.slice(1).map((n) => (
-            <div key={n.to}><Link to={n.to} className="hover:text-foreground">{n.label}</Link></div>
+            <div key={n.to}><Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link></div>
           ))}
         </div>
-        <div className="space-y-1 text-muted-foreground">
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground mb-3">Contato</div>
+        <div className="space-y-3 text-muted-foreground">
+          <div className="uppercase text-[11px] tracking-[0.2em] text-foreground mb-4">Contato</div>
           <div>jadson.langkammer@educacao.mg.gov.br</div>
           <div className="pt-2">
             <a
               href="https://wa.me/5533987138346?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20Jadson%20sobre%20aulas%2C%20oficinas%20ou%20palestras."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground text-background px-4 py-2 text-xs uppercase tracking-[0.18em] hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground text-background px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               Falar com o Profe!
             </a>
@@ -127,7 +127,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
+      <div className="border-t border-border py-6 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Jadson Fernando — Todos os direitos reservados.
       </div>
     </footer>
@@ -136,16 +136,16 @@ export function SiteFooter() {
 
 export function PageShell({ kicker, title, lede, children }: { kicker: string; title: string; lede?: string; children: ReactNode }) {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-28">
+    <div className="mx-auto max-w-7xl px-6 lg:px-12 py-24 lg:py-32">
       <div className="max-w-3xl">
-        <div className="text-xs uppercase tracking-[0.25em] text-accent-foreground/80">
+        <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
           <span className="inline-block w-8 h-px bg-accent align-middle mr-3" />
           {kicker}
         </div>
         <h1 className="font-display text-5xl md:text-7xl mt-6 text-balance leading-[0.95]">{title}</h1>
         {lede && <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">{lede}</p>}
       </div>
-      <div className="mt-16">{children}</div>
+      <div className="mt-20">{children}</div>
     </div>
   );
 }
@@ -154,7 +154,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col grain">
       <SiteHeader />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pt-[88px] lg:pt-[72px]">{children}</main>
       <SiteFooter />
     </div>
   );
