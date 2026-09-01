@@ -39,35 +39,37 @@
 
 :root {
   --radius: 0.25rem;
-  /* Editorial palette — navy-forward blues, cool paper, marine accent */
-  --paper: oklch(0.97 0.012 240);
-  --ink: oklch(0.22 0.06 250);
-  --ochre: oklch(0.48 0.14 250);
-  --rust: oklch(0.32 0.11 250);
+  /* Moss & Ink palette — deep greens, sage accents, pale moss text */
+  --moss-black: oklch(0.20 0.03 150);
+  --moss-deep: oklch(0.30 0.05 150);
+  --moss-mid: oklch(0.40 0.07 150);
+  --sage: oklch(0.60 0.12 145);
+  --pale-moss: oklch(0.90 0.04 130);
+  --muted-sage: oklch(0.70 0.06 140);
 
-  --background: var(--paper);
-  --foreground: var(--ink);
-  --card: oklch(0.985 0.008 240);
-  --card-foreground: var(--ink);
-  --popover: var(--paper);
-  --popover-foreground: var(--ink);
-  --primary: var(--ink);
-  --primary-foreground: var(--paper);
-  --secondary: oklch(0.92 0.022 240);
-  --secondary-foreground: var(--ink);
-  --muted: oklch(0.92 0.02 240);
-  --muted-foreground: oklch(0.45 0.04 245);
-  --accent: var(--ochre);
-  --accent-foreground: var(--paper);
+  --background: var(--moss-black);
+  --foreground: var(--pale-moss);
+  --card: var(--moss-deep);
+  --card-foreground: var(--pale-moss);
+  --popover: var(--moss-deep);
+  --popover-foreground: var(--pale-moss);
+  --primary: var(--pale-moss);
+  --primary-foreground: var(--moss-black);
+  --secondary: var(--moss-mid);
+  --secondary-foreground: var(--pale-moss);
+  --muted: var(--moss-deep);
+  --muted-foreground: var(--muted-sage);
+  --accent: var(--sage);
+  --accent-foreground: var(--moss-black);
   --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: var(--paper);
-  --border: oklch(0.86 0.025 240);
-  --input: oklch(0.86 0.025 240);
-  --ring: var(--ochre);
+  --destructive-foreground: var(--pale-moss);
+  --border: oklch(0.35 0.05 150);
+  --input: oklch(0.35 0.05 150);
+  --ring: var(--sage);
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Fira Sans", system-ui, sans-serif;
 }
 
 @layer base {
