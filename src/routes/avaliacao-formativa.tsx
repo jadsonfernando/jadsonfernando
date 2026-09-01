@@ -32,9 +32,9 @@ function Page() {
         {/* CICLO */}
         <div className="grid md:grid-cols-4 gap-px bg-border border border-border">
           {passos.map((p, i) => (
-            <div key={p.n} className="bg-background p-8 relative">
+            <div key={p.n} className="bg-card p-8 relative">
               <div className="font-display text-6xl text-accent">{p.n}</div>
-              <h3 className="font-display text-2xl mt-4">{p.t}</h3>
+              <h3 className="font-display text-2xl mt-4 text-foreground">{p.t}</h3>
               <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{p.d}</p>
               {i < passos.length - 1 && (
                 <div className="hidden md:block absolute top-12 -right-3 text-accent text-2xl">→</div>
@@ -45,8 +45,8 @@ function Page() {
 
         {/* MANIFESTO */}
         <div className="mt-24 max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Manifesto breve</div>
-          <div className="font-display text-3xl md:text-4xl mt-6 space-y-6 leading-snug">
+          <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Manifesto breve</div>
+          <div className="font-display text-3xl md:text-4xl mt-6 space-y-6 leading-snug text-foreground">
             <p>A prova não é fim. É <em className="text-accent">indício</em>.</p>
             <p>A nota não ensina. <em className="text-accent">A devolutiva ensina.</em></p>
             <p>O erro não é defeito. É <em className="text-accent">matéria-prima</em>.</p>
@@ -56,7 +56,7 @@ function Page() {
 
         {/* RUBRICA SAMPLE */}
         <div className="mt-24 border-t border-border pt-12">
-          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Exemplo · Rubrica formativa</div>
+          <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Exemplo · Rubrica formativa</div>
           <div className="mt-6 grid grid-cols-4 text-sm border border-border">
             {["Critério", "Emergente", "Em desenvolvimento", "Consolidado"].map((h) => (
               <div key={h} className="bg-foreground text-background p-4 font-medium uppercase text-[11px] tracking-[0.15em]">{h}</div>
@@ -67,7 +67,7 @@ function Page() {
               ["Autoria", "Reproduz referências sem síntese.", "Mescla referências com análise inicial.", "Constrói posicionamento autoral."],
             ].map((row) =>
               row.map((c, i) => (
-                <div key={row[0] + i} className={`p-4 border-t border-border ${i === 0 ? "font-medium bg-card" : "text-muted-foreground"}`}>{c}</div>
+                <div key={row[0] + i} className={`p-4 border-t border-border ${i === 0 ? "font-medium bg-card text-foreground" : "text-muted-foreground"}`}>{c}</div>
               ))
             )}
           </div>

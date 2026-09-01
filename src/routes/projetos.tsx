@@ -33,10 +33,10 @@ function Page() {
       >
         <div className="border-t border-border">
           {projetos.map((p) => (
-            <article key={p.t} className="grid md:grid-cols-12 gap-6 py-10 border-b border-border items-baseline group">
+            <article key={p.t} className="grid md:grid-cols-12 gap-6 py-10 border-b border-border items-baseline group hover:bg-card -mx-4 px-4 transition-colors">
               <div className="md:col-span-1 font-display text-2xl text-accent">{p.y}</div>
               <div className="md:col-span-2 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">{p.k}</div>
-              <h3 className="md:col-span-5 font-display text-3xl md:text-4xl">{p.t}</h3>
+              <h3 className="md:col-span-5 font-display text-3xl md:text-4xl text-foreground">{p.t}</h3>
               <p className="md:col-span-4 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
             </article>
           ))}
