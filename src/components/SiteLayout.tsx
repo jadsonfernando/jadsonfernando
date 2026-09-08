@@ -16,10 +16,11 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-5 flex items-center justify-between gap-8">
-        <Link to="/" className="flex items-baseline gap-2 group">
-          <span className="font-display text-2xl tracking-tight text-foreground">Jadson Fernando</span>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hidden sm:inline">
-            · prof.
+        <Link to="/" className="flex items-baseline gap-2 group font-display">
+          <span className="text-primary">&gt;_</span>
+          <span className="text-lg font-bold tracking-tight text-foreground">jadson.fernando</span>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hidden sm:inline font-sans">
+            // prof. tecnologia
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm">
@@ -35,7 +36,7 @@ export function SiteHeader() {
               >
                 {n.label}
                 {active && (
-                  <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-accent" />
+                  <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-primary glow-sky" />
                 )}
               </Link>
             );
@@ -68,7 +69,7 @@ export function SiteFooter() {
     <footer className="border-t border-border mt-0 bg-card">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12 text-sm">
         <div>
-          <div className="font-display text-2xl text-foreground">Jadson Fernando</div>
+          <div className="font-display text-xl font-bold text-foreground"><span className="text-primary">&gt;_</span> jadson.fernando</div>
           <p className="text-muted-foreground mt-2">Professor e Pesquisador</p>
           <div className="text-muted-foreground mt-6 space-y-2 text-sm">
             <div>GEG Brasil</div>
@@ -90,7 +91,7 @@ export function SiteFooter() {
               href="https://wa.me/5533987138346?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20Jadson%20sobre%20aulas%2C%20oficinas%20ou%20palestras."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground text-background px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="inline-flex items-center gap-2 border border-primary/40 bg-primary/10 text-primary px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky"
             >
               Falar com o Profe!
             </a>
@@ -101,7 +102,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
             >
               <Instagram size={16} />
             </a>
@@ -110,7 +111,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
             >
               <Linkedin size={16} />
             </a>
@@ -120,7 +121,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               aria-label="Currículo Lattes"
               title="Currículo Lattes"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
             >
               <GraduationCap size={16} />
             </a>
@@ -138,11 +139,10 @@ export function PageShell({ kicker, title, lede, children }: { kicker: string; t
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-12 py-24 lg:py-32">
       <div className="max-w-3xl">
-        <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-          <span className="inline-block w-8 h-px bg-accent align-middle mr-3" />
-          {kicker}
+        <div className="font-display text-xs tracking-wider text-primary">
+          <span className="text-muted-foreground">//</span> {kicker}
         </div>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 text-balance leading-[0.95]">{title}</h1>
+        <h1 className="font-display text-4xl md:text-6xl font-bold mt-6 text-balance leading-[1.02]">{title}</h1>
         {lede && <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">{lede}</p>}
       </div>
       <div className="mt-20">{children}</div>
