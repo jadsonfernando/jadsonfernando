@@ -28,10 +28,6 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ink: var(--ink);
-  --color-paper: var(--paper);
-  --color-ochre: var(--ochre);
-  --color-rust: var(--rust);
   --font-display: var(--font-display);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
@@ -39,37 +35,38 @@
 
 :root {
   --radius: 0.25rem;
-  /* Moss & Ink palette — deep greens, sage accents, pale moss text */
-  --moss-black: oklch(0.20 0.03 150);
-  --moss-deep: oklch(0.30 0.05 150);
-  --moss-mid: oklch(0.40 0.07 150);
-  --sage: oklch(0.60 0.12 145);
-  --pale-moss: oklch(0.90 0.04 130);
-  --muted-sage: oklch(0.70 0.06 140);
+  /* Cyber Navy palette — deep navy base, electric sky/cyan accents */
+  --navy-950: oklch(0.13 0.02 264);
+  --navy-900: oklch(0.17 0.03 264);
+  --navy-800: oklch(0.22 0.04 262);
+  --navy-700: oklch(0.30 0.05 260);
+  --sky: oklch(0.75 0.14 220);
+  --cyan-ice: oklch(0.92 0.06 200);
+  --steel: oklch(0.68 0.03 250);
 
-  --background: var(--moss-black);
-  --foreground: var(--pale-moss);
-  --card: var(--moss-deep);
-  --card-foreground: var(--pale-moss);
-  --popover: var(--moss-deep);
-  --popover-foreground: var(--pale-moss);
-  --primary: var(--pale-moss);
-  --primary-foreground: var(--moss-black);
-  --secondary: var(--moss-mid);
-  --secondary-foreground: var(--pale-moss);
-  --muted: var(--moss-deep);
-  --muted-foreground: var(--muted-sage);
-  --accent: var(--sage);
-  --accent-foreground: var(--moss-black);
-  --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: var(--pale-moss);
-  --border: oklch(0.35 0.05 150);
-  --input: oklch(0.35 0.05 150);
-  --ring: var(--sage);
+  --background: var(--navy-950);
+  --foreground: oklch(0.93 0.02 240);
+  --card: var(--navy-900);
+  --card-foreground: var(--foreground);
+  --popover: var(--navy-900);
+  --popover-foreground: var(--foreground);
+  --primary: var(--sky);
+  --primary-foreground: var(--navy-950);
+  --secondary: var(--navy-800);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--navy-800);
+  --muted-foreground: var(--steel);
+  --accent: var(--cyan-ice);
+  --accent-foreground: var(--navy-950);
+  --destructive: oklch(0.60 0.22 27);
+  --destructive-foreground: var(--foreground);
+  --border: oklch(0.30 0.04 260);
+  --input: oklch(0.32 0.04 260);
+  --ring: var(--sky);
 
-  --font-display: "DM Serif Display", Georgia, serif;
-  --font-serif: "DM Serif Display", Georgia, serif;
-  --font-sans: "Fira Sans", system-ui, sans-serif;
+  --font-display: "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Work Sans", system-ui, sans-serif;
 }
 
 @layer base {
@@ -80,19 +77,31 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  ::selection {
+    background-color: var(--sky);
+    color: var(--navy-950);
   }
 }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
+  /* fine circuit grid */
   .grain {
-    background-image: radial-gradient(oklch(0.18 0.012 60 / 0.04) 1px, transparent 1px);
-    background-size: 3px 3px;
+    background-image:
+      linear-gradient(oklch(0.30 0.04 260 / 0.22) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.30 0.04 260 / 0.22) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .glow-sky {
+    box-shadow: 0 0 24px oklch(0.75 0.14 220 / 0.25);
+  }
+  .text-glow {
+    text-shadow: 0 0 18px oklch(0.75 0.14 220 / 0.45);
   }
 }

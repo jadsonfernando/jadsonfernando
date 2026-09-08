@@ -18,17 +18,19 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <SiteLayout>
-      {/* HERO — full-width band */}
-      <section className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-            <div className="lg:col-span-7">
-              <div className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-3">
-                <span className="w-10 h-px bg-accent" /> Edição 01 — Sobre mim
+      {/* HERO — broken grid: texto deslocado, foto sobreposta, stats flutuando */}
+      <section className="relative overflow-hidden">
+        {/* glow decorativo */}
+        <div className="pointer-events-none absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 pt-20 lg:pt-28 pb-32 lg:pb-40 relative">
+          <div className="grid lg:grid-cols-12 gap-10">
+            <div className="lg:col-span-7 relative z-10">
+              <div className="font-display text-xs tracking-wider text-primary">
+                <span className="text-muted-foreground">//</span> 01 — sobre mim
               </div>
-              <h1 className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.88] mt-8 text-balance">
+              <h1 className="font-display text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[0.98] mt-8 text-balance">
                 Ensinar é<br />
-                <span className="italic text-accent">despertar</span> —<br />
+                <span className="text-primary text-glow">despertar_</span><br />
                 não preencher.
               </h1>
               <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
@@ -38,69 +40,43 @@ function Index() {
                 <strong className="text-foreground font-medium"> projeto de multidesenvolvimento</strong>.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                <Link to="/convites" className="bg-foreground text-background px-7 py-4 text-[11px] uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors">
+                <Link to="/convites" className="bg-primary text-primary-foreground px-7 py-4 text-[11px] font-display uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors glow-sky">
                   Convites para eventos
                 </Link>
-                <Link to="/metodologias-ativas" className="border border-foreground px-7 py-4 text-[11px] uppercase tracking-[0.18em] hover:bg-foreground hover:text-background transition-colors">
+                <Link to="/metodologias-ativas" className="border border-border px-7 py-4 text-[11px] font-display uppercase tracking-[0.18em] text-foreground hover:border-primary hover:text-primary transition-colors">
                   Conhecer o método
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative">
-              <div className="absolute -inset-3 border border-accent translate-x-3 translate-y-3 -z-10" />
+            {/* Foto quebrando a coluna — sobrepõe o texto no desktop */}
+            <div className="lg:col-span-5 relative lg:-ml-16 lg:mt-16 z-0">
+              <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
               <img
                 src={jadsonAsset.url}
                 alt="Prof. Jadson Fernando"
-                className="w-full aspect-[3/4] object-cover grayscale-[0.15]"
+                className="w-full aspect-[3/4] object-cover grayscale-[0.2] contrast-[1.05]"
                 loading="eager"
               />
-              <div className="absolute -left-2 top-6 -rotate-90 origin-top-left text-[10px] uppercase tracking-[0.4em] text-muted-foreground hidden md:block">
-                Retrato · 2025
+              <div className="absolute -bottom-5 -left-5 bg-card border border-border px-5 py-4 glow-sky">
+                <div className="font-display text-[10px] text-primary">{"{ status: \"online\" }"}</div>
+                <div className="text-xs text-muted-foreground mt-1">Ciência · Tecnologia · Inovação</div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* STATS — full-width band */}
-      <section className="border-y border-border bg-card">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            ["+20", "anos em sala de aula"],
-            ["+80", "palestras realizadas"],
-            ["+10K", "alunos impactados"],
-            ["100%", "centrado no aluno"],
-          ].map(([n, l]) => (
-            <div key={l}>
-              <div className="font-display text-5xl md:text-6xl text-foreground">{n}</div>
-              <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mt-2">{l}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PILARES — full-width band */}
-      <section className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-24 lg:py-32">
-          <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-4">
-              <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">02 — Pilares</div>
-              <h2 className="font-display text-4xl md:text-5xl mt-6 leading-tight">
-                Quatro princípios<br/>que orientam<br/><em className="text-accent">o trabalho.</em>
-              </h2>
-            </div>
-            <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-border border border-border">
+          {/* STATS — card deslocado, cruzando a dobra do hero */}
+          <div className="relative lg:absolute lg:left-12 lg:right-12 lg:-bottom-0 mt-16 lg:mt-0 z-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border glow-sky">
               {[
-                { n: "I", t: "Aluno no centro", d: "Cada decisão pedagógica parte do contexto, do interesse e do ritmo de quem aprende." },
-                { n: "II", t: "Metodologias ativas", d: "Sala de aula invertida, PBL, peer instruction e gamificação aplicadas ao cotidiano." },
-                { n: "III", t: "Avaliação formativa", d: "Avaliar para ensinar — feedback contínuo, devolutivas e rubricas transparentes." },
-                { n: "IV", t: "Tecnologia & carreira", d: "Inovação aplicada e desenvolvimento pessoal como eixos da formação." },
-              ].map((p) => (
-                <div key={p.n} className="bg-card p-8 hover:bg-secondary transition-colors">
-                  <div className="font-display text-3xl text-accent">{p.n}</div>
-                  <h3 className="font-display text-2xl mt-3 text-foreground">{p.t}</h3>
-                  <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p.d}</p>
+                ["+20", "anos em sala de aula"],
+                ["+80", "palestras realizadas"],
+                ["+10K", "alunos impactados"],
+                ["100%", "centrado no aluno"],
+              ].map(([n, l]) => (
+                <div key={l} className="bg-card p-6 lg:p-8">
+                  <div className="font-display text-4xl md:text-5xl font-bold text-primary">{n}</div>
+                  <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mt-2">{l}</div>
                 </div>
               ))}
             </div>
@@ -108,14 +84,46 @@ function Index() {
         </div>
       </section>
 
-      {/* MANIFESTO — full-width band */}
-      <section className="border-y border-border bg-card">
-        <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 lg:py-32">
-          <div className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-3">
-            <span className="w-10 h-px bg-accent" /> 03 — Manifesto
+      {/* PILARES — grid quebrado com blocos deslocados */}
+      <section className="border-t border-border bg-background lg:pt-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-24 lg:py-32">
+          <div className="grid md:grid-cols-12 gap-12">
+            <div className="md:col-span-4 md:sticky md:top-32 self-start">
+              <div className="font-display text-xs tracking-wider text-primary">
+                <span className="text-muted-foreground">//</span> 02 — pilares
+              </div>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mt-6 leading-tight">
+                Quatro princípios<br/>que orientam<br/><span className="text-primary">o trabalho.</span>
+              </h2>
+            </div>
+            <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
+              {[
+                { n: "01", t: "Aluno no centro", d: "Cada decisão pedagógica parte do contexto, do interesse e do ritmo de quem aprende.", off: "" },
+                { n: "02", t: "Metodologias ativas", d: "Sala de aula invertida, PBL, peer instruction e gamificação aplicadas ao cotidiano.", off: "sm:mt-12" },
+                { n: "03", t: "Avaliação formativa", d: "Avaliar para ensinar — feedback contínuo, devolutivas e rubricas transparentes.", off: "sm:-mt-12" },
+                { n: "04", t: "Tecnologia & carreira", d: "Inovação aplicada e desenvolvimento pessoal como eixos da formação.", off: "" },
+              ].map((p) => (
+                <div key={p.n} className={`group bg-card border border-border p-8 hover:border-primary/60 transition-colors ${p.off}`}>
+                  <div className="font-display text-sm text-primary">{`[${p.n}]`}</div>
+                  <h3 className="font-display text-xl font-bold mt-4 text-foreground">{p.t}</h3>
+                  <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p.d}</p>
+                  <div className="mt-6 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                </div>
+              ))}
+            </div>
           </div>
-          <h2 className="font-display text-4xl md:text-6xl mt-6 leading-[0.95] text-balance">
-            O que <em className="text-accent">me move.</em>
+        </div>
+      </section>
+
+      {/* MANIFESTO */}
+      <section className="border-y border-border bg-card relative overflow-hidden">
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/10 blur-3xl" />
+        <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 lg:py-32 relative">
+          <div className="font-display text-xs tracking-wider text-primary">
+            <span className="text-muted-foreground">//</span> 03 — manifesto
+          </div>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-6 leading-[1.05] text-balance">
+            O que <span className="text-primary">me move_</span>
           </h2>
           <div className="mt-12 space-y-7 text-lg md:text-xl leading-relaxed text-foreground/90 max-w-3xl">
             <p>
@@ -143,29 +151,31 @@ function Index() {
         </div>
       </section>
 
-      {/* QUOTE — full-width band */}
+      {/* QUOTE */}
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
-          <div className="font-display text-3xl md:text-5xl italic leading-snug text-balance">
-            “A boa aula não é a que cabe no plano —<br className="hidden md:block"/> é a que cabe no aluno.”
+          <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
+            “A boa aula não é a que cabe no plano —<br className="hidden md:block"/> é a que <span className="text-primary">cabe no aluno</span>.”
           </div>
-          <div className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground mt-8">Jadson Fernando</div>
+          <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
       </section>
 
-      {/* CTA grid — full-width band */}
+      {/* CTA grid */}
       <section className="bg-background pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { to: "/eventos", k: "Agenda", t: "Eventos" },
-              { to: "/projetos", k: "Trabalhos", t: "Projetos" },
-              { to: "/convites", k: "Fale comigo", t: "Convites" },
+              { to: "/eventos", k: "agenda", t: "Eventos" },
+              { to: "/projetos", k: "trabalhos", t: "Projetos" },
+              { to: "/convites", k: "fale comigo", t: "Convites" },
             ].map((c) => (
-              <Link key={c.to} to={c.to} className="group bg-card p-10 hover:bg-foreground hover:text-background transition-colors">
-                <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-background/60">{c.k}</div>
-                <div className="font-display text-4xl mt-4 flex items-baseline justify-between text-foreground group-hover:text-background">
-                  {c.t} <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
+              <Link key={c.to} to={c.to} className="group bg-card border border-border p-10 hover:border-primary hover:bg-primary/5 transition-colors">
+                <div className="font-display text-xs tracking-wider text-muted-foreground group-hover:text-primary">
+                  <span className="text-muted-foreground">//</span> {c.k}
+                </div>
+                <div className="font-display text-3xl font-bold mt-4 flex items-baseline justify-between text-foreground">
+                  {c.t} <span className="text-primary group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </Link>
             ))}
