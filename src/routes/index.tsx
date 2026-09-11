@@ -35,9 +35,9 @@ function Index() {
               </h1>
               <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Sou <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
-                Ciência, Tecnologia e Inovação. Minha metodologia coloca o aluno no centro
-                do desenvolvimento pessoal à carreira. Atualmente trabalho com EPT e lidero um
-                <strong className="text-foreground font-medium"> projeto de multidesenvolvimento</strong>.
+                Ciência, Tecnologia e Inovação. Minha atuação na Educação Profissional e Tecnológica (EPT) é guiada por uma certeza:
+                o aluno é o sujeito ativo da sua aprendizagem. À frente de projetos de multidesenvolvimento, crio caminhos práticas
+                que preparam estudantes do crescimento pessoal à construção de carreiras de impacto.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link to="/convites" className="bg-primary text-primary-foreground px-7 py-4 text-[11px] font-display uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors glow-sky">
