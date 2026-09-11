@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import jadsonAsset from "@/assets/jadson.jpg.asset.json";
+import jadsonAsset from "@/assets/jadson-sobre.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
