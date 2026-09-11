@@ -35,17 +35,17 @@
 
 :root {
   --radius: 0.25rem;
-  /* Cyber Navy palette — deep navy base, electric sky/cyan accents */
-  --navy-950: oklch(0.13 0.02 264);
-  --navy-900: oklch(0.17 0.03 264);
-  --navy-800: oklch(0.22 0.04 262);
-  --navy-700: oklch(0.30 0.05 260);
-  --sky: oklch(0.75 0.14 220);
-  --cyan-ice: oklch(0.92 0.06 200);
-  --steel: oklch(0.68 0.03 250);
+  /* Professional Navy palette — deep navy base, electric blue accents */
+  --navy-950: #0a1628;
+  --navy-900: #0f2744;
+  --navy-800: #1e3a5f;
+  --navy-700: #2a4a73;
+  --sky: #3b82f6;
+  --cyan-ice: #e0f2fe;
+  --steel: #93c5fd;
 
   --background: var(--navy-950);
-  --foreground: oklch(0.93 0.02 240);
+  --foreground: #f0f9ff;
   --card: var(--navy-900);
   --card-foreground: var(--foreground);
   --popover: var(--navy-900);
@@ -58,10 +58,10 @@
   --muted-foreground: var(--steel);
   --accent: var(--cyan-ice);
   --accent-foreground: var(--navy-950);
-  --destructive: oklch(0.60 0.22 27);
+  --destructive: #ef4444;
   --destructive-foreground: var(--foreground);
-  --border: oklch(0.30 0.04 260);
-  --input: oklch(0.32 0.04 260);
+  --border: var(--navy-700);
+  --input: var(--navy-700);
   --ring: var(--sky);
 
   --font-display: "JetBrains Mono", ui-monospace, monospace;
