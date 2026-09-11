@@ -1,4 +1,4 @@
 # Roadmap
 
 - [x] Reescrever o manifesto breve da página Avaliação Formativa.
-- [ ] Alterar a paleta de cores do site (aguardando escolha da cor).
+- [x] Alterar a paleta de cores do site para azul marinho profissional.
