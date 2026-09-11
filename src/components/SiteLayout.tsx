@@ -4,9 +4,9 @@ import { Instagram, Linkedin, GraduationCap } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Sobre" },
+  { to: "/formacao-professores", label: "Formação" },
   { to: "/metodologias-ativas", label: "Metodologias Ativas" },
   { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
-  { to: "/formacao-professores", label: "Formação" },
   { to: "/projetos", label: "Projetos" },
   { to: "/convites", label: "Convites" },
 ] as const;
