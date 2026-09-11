@@ -36,7 +36,7 @@ function Index() {
               <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Sou <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
                 Ciência, Tecnologia e Inovação. Minha atuação na Educação Profissional e Tecnológica (EPT) é guiada por uma certeza:
-                o aluno é o sujeito ativo da sua aprendizagem. À frente de projetos de multidesenvolvimento, crio caminho prático
+                o aluno é o sujeito ativo da sua aprendizagem. À frente de projetos de multidesenvolvimento, crio caminhos práticos
                 que preparam estudantes do crescimento pessoal à construção de carreiras de impacto.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
