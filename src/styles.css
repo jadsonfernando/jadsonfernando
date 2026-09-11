@@ -94,14 +94,14 @@
   /* fine circuit grid */
   .grain {
     background-image:
-      linear-gradient(oklch(0.30 0.04 260 / 0.22) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.30 0.04 260 / 0.22) 1px, transparent 1px);
+      linear-gradient(rgb(42 74 115 / 0.22) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(42 74 115 / 0.22) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .glow-sky {
-    box-shadow: 0 0 24px oklch(0.75 0.14 220 / 0.25);
+    box-shadow: 0 0 24px rgb(59 130 246 / 0.25);
   }
   .text-glow {
-    text-shadow: 0 0 18px oklch(0.75 0.14 220 / 0.45);
+    text-shadow: 0 0 18px rgb(59 130 246 / 0.45);
   }
 }
