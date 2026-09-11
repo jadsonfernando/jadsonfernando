@@ -45,12 +45,12 @@ function Page() {
 
         {/* MANIFESTO */}
         <div className="mt-24 max-w-3xl">
-          <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Manifesto breve</div>
           <div className="font-display text-3xl md:text-4xl mt-6 space-y-6 leading-snug text-foreground">
-            <p>A prova não é sentença. É <em className="text-accent">pista</em>.</p>
-            <p>A nota não muda vidas. A <em className="text-accent">devolutiva</em> muda.</p>
-            <p>Errar não é falta. É <em className="text-accent">combustível</em> para crescer.</p>
-            <p>O aluno não é número. É <em className="text-accent">potência em construção</em>.</p>
+            <p>✦ Manifesto Breve</p>
+            <p>🎯 A prova não é o fim. É apenas o <em className="text-accent">indício da jornada</em>.</p>
+            <p>💡 A nota não ensina. É a <em className="text-accent">devolutiva</em> que gera transformação.</p>
+            <p>🧩 O erro não é um defeito. É a nossa principal <em className="text-accent">matéria-prima</em>.</p>
+            <p>🚀 O aluno não é objeto de avaliação. É o sujeito ativo da sua própria aprendizagem, é a <em className="text-accent">potência em construção</em>.</p>
           </div>
         </div>
 
