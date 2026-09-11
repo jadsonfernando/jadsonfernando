@@ -20,7 +20,7 @@ export function SiteHeader() {
           <span className="text-primary">&gt;_</span>
           <span className="text-lg font-bold tracking-tight text-foreground">jadson.fernando</span>
           <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hidden sm:inline font-sans">
-            // prof. tecnologia
+            // CT&I
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm">
