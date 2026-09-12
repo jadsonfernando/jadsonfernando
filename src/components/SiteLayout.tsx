@@ -8,6 +8,7 @@ const nav = [
   { to: "/metodologias-ativas", label: "Metodologias Ativas" },
   { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
   { to: "/projetos", label: "Projetos" },
+  { to: "/comunidade", label: "Comunidade" },
   { to: "/convites", label: "Convites" },
 ] as const;
 
