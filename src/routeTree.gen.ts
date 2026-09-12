@@ -14,6 +14,7 @@ import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-at
 import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
 import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as ConvitesRouteImport } from './routes/convites'
+import { Route as ComunidadeRouteImport } from './routes/comunidade'
 import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -42,6 +43,11 @@ const ConvitesRoute = ConvitesRouteImport.update({
   path: '/convites',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComunidadeRoute = ComunidadeRouteImport.update({
+  id: '/comunidade',
+  path: '/comunidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AvaliacaoFormativaRoute = AvaliacaoFormativaRouteImport.update({
   id: '/avaliacao-formativa',
   path: '/avaliacao-formativa',
@@ -56,6 +62,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/comunidade': typeof ComunidadeRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/comunidade': typeof ComunidadeRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/avaliacao-formativa': typeof AvaliacaoFormativaRoute
+  '/comunidade': typeof ComunidadeRoute
   '/convites': typeof ConvitesRoute
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/avaliacao-formativa'
+    | '/comunidade'
     | '/convites'
     | '/eventos'
     | '/formacao-professores'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/avaliacao-formativa'
+    | '/comunidade'
     | '/convites'
     | '/eventos'
     | '/formacao-professores'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/avaliacao-formativa'
+    | '/comunidade'
     | '/convites'
     | '/eventos'
     | '/formacao-professores'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvaliacaoFormativaRoute: typeof AvaliacaoFormativaRoute
+  ComunidadeRoute: typeof ComunidadeRoute
   ConvitesRoute: typeof ConvitesRoute
   EventosRoute: typeof EventosRoute
   FormacaoProfessoresRoute: typeof FormacaoProfessoresRoute
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConvitesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comunidade': {
+      id: '/comunidade'
+      path: '/comunidade'
+      fullPath: '/comunidade'
+      preLoaderRoute: typeof ComunidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/avaliacao-formativa': {
       id: '/avaliacao-formativa'
       path: '/avaliacao-formativa'
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvaliacaoFormativaRoute: AvaliacaoFormativaRoute,
+  ComunidadeRoute: ComunidadeRoute,
   ConvitesRoute: ConvitesRoute,
   EventosRoute: EventosRoute,
   FormacaoProfessoresRoute: FormacaoProfessoresRoute,
