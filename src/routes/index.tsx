@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import jadsonAsset from "@/assets/jadson-sobre.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,7 +52,7 @@ function Index() {
             <div className="lg:col-span-5 relative lg:-ml-16 lg:mt-16 z-0">
               <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
               <img
-                src={jadsonAsset.url}
+                src="/jadson-sobre.jpg"
                 alt="Prof. Jadson Fernando"
                 className="w-full aspect-[3/4] object-cover grayscale-[0.2] contrast-[1.05]"
                 loading="eager"
