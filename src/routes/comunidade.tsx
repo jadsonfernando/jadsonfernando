@@ -67,8 +67,6 @@ function Page() {
           </p>
           <a
             href="https://chat.whatsapp.com/CwvGn9kLCS046fhd5vc2D0"
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 mt-8 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky"
           >
             Quero Fazer Parte
