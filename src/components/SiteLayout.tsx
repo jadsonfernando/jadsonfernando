@@ -71,7 +71,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12 text-sm">
         <div>
           <div className="font-display text-xl font-bold text-foreground"><span className="text-primary">&gt;_</span> jadson.fernando</div>
-          <p className="text-muted-foreground mt-2">Professor e Pesquisador</p>
+          <p className="text-muted-foreground mt-2">Professor . Pesquisador . Mentor</p>
           <div className="text-muted-foreground mt-6 space-y-2 text-sm">
             <div>GEG Brasil</div>
             <div>Google Workspace for Education</div>
