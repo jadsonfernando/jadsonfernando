@@ -40,7 +40,7 @@ function Page() {
     <SiteLayout>
       <PageShell
         kicker="Comunidade"
-        title="CEM | Comunidade de Educadores Multipotenciais"
+        title="CEM >> Comunidade de Educadores Multipotenciais"
         lede="Um espaço para quem acredita que educar é conectar. Junte-se a educadores que transformam a sala de aula em laboratório de possibilidades."
       >
         <div className="grid md:grid-cols-3 gap-6">
