@@ -40,7 +40,7 @@ function Page() {
     <SiteLayout>
       <PageShell
         kicker="Comunidade"
-        title="Comunidade de Educadores Multipotenciais"
+        title="CEM | Comunidade de Educadores Multipotenciais"
         lede="Um espaço para quem acredita que educar é conectar. Junte-se a educadores que transformam a sala de aula em laboratório de possibilidades."
       >
         <div className="grid md:grid-cols-3 gap-6">
@@ -60,16 +60,16 @@ function Page() {
 
         <div className="mt-20 border border-primary/30 bg-primary/5 p-10 md:p-14 text-center">
           <h2 className="font-display text-2xl md:text-3xl text-foreground">
-            Faça parte dessa rede
+            QUERO SER PARTE
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Entre no grupo de WhatsApp e comece a trocar ideias com outros educadores multipotenciais.
+            Entre para o ecossistema e comece a interagir com outros pares [educadores multipotenciais].
           </p>
           <a
             href="https://chat.whatsapp.com/CwvGn9kLCS046fhd5vc2D0"
             className="inline-flex items-center gap-3 mt-8 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky"
           >
-            Quero Fazer Parte
+            ENTRAR NA COMUNIDADE
             <ArrowRight size={16} />
           </a>
         </div>
