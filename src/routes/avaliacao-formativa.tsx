@@ -45,7 +45,7 @@ function Page() {
 
         {/* MANIFESTO */}
         <div className="mt-24 max-w-3xl">
-          <div className="font-sans text-3xl md:text-4xl mt-6 space-y-6 leading-snug text-foreground">
+          <div className="font-display text-3xl md:text-4xl mt-6 space-y-6 leading-snug text-foreground">
             <p>Manifesto Breve</p>
             <p>A prova não é o fim. É apenas o <em className="text-accent">indício da jornada</em>.</p>
             <p>A nota não ensina. É a <em className="text-accent">devolutiva</em> que gera transformação.</p>
