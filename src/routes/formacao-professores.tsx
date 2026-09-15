@@ -48,7 +48,7 @@ function FormacaoProfessores() {
     <SiteLayout>
       <PageShell
         kicker="Edição 07 · Formação"
-        title="Formação de Professores."
+        title="Formação de Pares."
         lede="Trilhas desenhadas para que professores experimentem, adaptem e sustentem novas práticas — não apenas conheçam ferramentas."
       >
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
