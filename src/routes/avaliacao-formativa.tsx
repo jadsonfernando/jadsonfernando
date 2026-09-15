@@ -45,12 +45,12 @@ function Page() {
 
         {/* MANIFESTO */}
         <div className="mt-24 max-w-3xl">
-          <div className="font-display text-3xl md:text-4xl mt-6 space-y-6 leading-snug text-foreground">
-            <p>Manifesto Breve</p>
-            <p>A prova não é o fim. É apenas o <em className="text-accent">indício da jornada</em>.</p>
-            <p>A nota não ensina. É a <em className="text-accent">devolutiva</em> que gera transformação.</p>
-            <p>O erro não é um defeito. É a nossa principal <em className="text-accent">matéria-prima</em>.</p>
-            <p>O aluno não é objeto de avaliação. É o sujeito ativo da sua própria aprendizagem, é a <em className="text-accent">potência em construção</em>.</p>
+          <div className="font-display text-lg md:text-xl mt-6 space-y-5 leading-relaxed text-foreground">
+            <p className="text-muted-foreground uppercase tracking-[0.2em] text-xs">Manifesto Breve</p>
+            <p>A prova não é o <em className="text-accent not-italic font-medium">fim</em>. É apenas o <em className="text-accent not-italic font-medium">indício da jornada</em>.</p>
+            <p>A nota <em className="text-accent not-italic font-medium">não ensina</em>. É a <em className="text-accent not-italic font-medium">devolutiva</em> que gera transformação.</p>
+            <p>O erro não é um defeito. É a nossa principal <em className="text-accent not-italic font-medium">matéria-prima</em>.</p>
+            <p>O aluno não é objeto de avaliação. É o <em className="text-accent not-italic font-medium">sujeito ativo</em> da sua própria aprendizagem, é a <em className="text-accent not-italic font-medium">potência em construção</em>.</p>
           </div>
         </div>
 
