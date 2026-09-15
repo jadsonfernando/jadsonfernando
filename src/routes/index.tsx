@@ -154,7 +154,7 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
           <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
-            “Nenhuma aula cabe no plano se<br className="hidden md:block"/> não couber primeiro na <span className="text-primary">vida do aluno</span>.”
+            Plano de aula é o <span className="text-primary">rascunho</span>;<br className="hidden md:block"/> a obra final se escreve na <span className="text-primary">vida do aluno</span>.
           </div>
           <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
