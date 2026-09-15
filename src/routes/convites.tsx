@@ -9,7 +9,7 @@ export const Route = createFileRoute("/convites")({
       { title: "Convites — Jadson Fernando" },
       { name: "description", content: "Convide o Prof. Jadson Fernando para palestras, formações, mentorias e bancas." },
       { property: "og:title", content: "Convites — Jadson Fernando" },
-      { property: "og:description", content: "Palestras, formações e mentorias sob medida." },
+      { property: "og:description", content: "Contrate palestras, formações e mentorias sob medida." },
     ],
     links: [{ rel: "canonical", href: "/convites" }],
   }),
@@ -29,8 +29,8 @@ function Page() {
     <SiteLayout>
       <PageShell
         kicker="06 — Convites"
-        title="Vamos construir juntos?"
-        lede="Conte sobre o evento, a escola ou o projeto. Respondo pessoalmente em até dois dias úteis."
+        title="Contrate uma experiência transformadora."
+        lede="Escolha o formato e conte o contexto — eu cuido do resto: conteúdo sob medida, entrega impecável e impacto que fica. Respondo pessoalmente em até dois dias úteis."
       >
         <div className="grid md:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* FORMATOS */}
