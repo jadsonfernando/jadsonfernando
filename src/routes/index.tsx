@@ -154,7 +154,7 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
           <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
-            Plano de aula é o <span className="text-primary">rascunho</span>;<br className="hidden md:block"/> a obra final se escreve na <span className="text-primary">vida do aluno</span>.
+            A melhor aula <span className="text-primary">não cabe no plano</span> —<br className="hidden md:block"/> ela <span className="text-primary">transborda</span> para a <span className="text-primary">vida do aluno</span>.
           </div>
           <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
