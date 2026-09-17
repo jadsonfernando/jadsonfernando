@@ -15,12 +15,14 @@ export const Route = createFileRoute("/projetos")({
 });
 
 const projetos = [
+  { y: "2026", t: "Soft Skills", k: "Formação", d: "O talento contrata, o comportamento promove: uma experiência imersiva que transforma comunicação, empatia e resiliência em vantagem competitiva real — a habilidade que nenhum algoritmo substitui." },
   { y: "2025", t: "Trilha Carreira em Tech", k: "Mentoria", d: "Programa de mentoria coletiva para estudantes em transição da escola para o mercado de tecnologia." },
   { y: "2024", t: "Avaliar para Ensinar", k: "Formação docente", d: "Curso de formação continuada em avaliação formativa para redes públicas e privadas." },
   { y: "2024", t: "Sala Invertida·Br", k: "Pesquisa", d: "Estudo de caso sobre adoção de sala de aula invertida em escolas brasileiras de Ensino Médio." },
   { y: "2023", t: "Hackathon Estudantil", k: "Evento", d: "Organização e curadoria pedagógica de hackathon multidisciplinar para 300+ alunos." },
   { y: "2023", t: "Diário de Bordo Digital", k: "Ferramenta", d: "Modelo de devolutiva contínua para acompanhamento individual do percurso do estudante." },
   { y: "2022", t: "Podcast Aula Aberta", k: "Mídia", d: "Conversas com educadores sobre os bastidores da prática pedagógica contemporânea." },
+  { y: "2021", t: "Currículo Apoteótico", k: "Formação", d: "Programa de construção de currículo e marca profissional desenvolvido no Senac Minas, do autoconhecimento à empregabilidade." },
 ];
 
 function Page() {
