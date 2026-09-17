@@ -22,7 +22,7 @@ const projetos = [
   { y: "2023", t: "Hackathon Estudantil", k: "Evento", d: "Organização e curadoria pedagógica de hackathon multidisciplinar para 300+ alunos." },
   { y: "2023", t: "Diário de Bordo Digital", k: "Ferramenta", d: "Modelo de devolutiva contínua para acompanhamento individual do percurso do estudante." },
   { y: "2022", t: "Podcast Aula Aberta", k: "Mídia", d: "Conversas com educadores sobre os bastidores da prática pedagógica contemporânea." },
-  { y: "2021", t: "Currículo Apoteótico", k: "Formação", d: "Programa de construção de currículo e marca profissional desenvolvido no Senac Minas, do autoconhecimento à empregabilidade." },
+  { y: "2021", t: "Currículo Exponencial", k: "Formação", d: "Programa de construção de currículo e marca pessoal. Superação do modelo tradicional de currículo. Capacitou estudantes a estruturar suas trajetórias a partir do protagonismo, mapeando competências técnicas e soft skills para criar portfólios de alto impacto alinhados às demandas do mercado de tecnologia e inovação." },
 ];
 
 function Page() {
