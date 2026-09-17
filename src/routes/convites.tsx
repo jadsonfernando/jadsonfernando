@@ -23,8 +23,27 @@ const formatos = [
   { t: "Curadoria", d: "Curadoria pedagógica de eventos, hackathons e trilhas formativas.", n: "04" },
 ];
 
+const WHATSAPP = "5533987138346";
+
 function Page() {
   const [sent, setSent] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    const msg = [
+      "Olá, Prof. Jadson! Gostaria de fazer um convite.",
+      "",
+      `*Nome:* ${f.get("nome")}`,
+      `*Instituição:* ${f.get("org")}`,
+      `*E-mail:* ${f.get("email")}`,
+      `*Telefone:* ${f.get("tel")}`,
+      `*Formato:* ${f.get("formato")}`,
+      `*Data prevista:* ${f.get("data")}`,
+      `*Sobre o evento:* ${f.get("msg")}`,
+    ].join("\n");
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+    setSent(true);
+  };
   return (
     <SiteLayout>
       <PageShell
@@ -51,12 +70,12 @@ function Page() {
           {/* FORM */}
           <form
             className="md:col-span-7 bg-card p-8 lg:p-12 border border-border space-y-6 self-start"
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={handleSubmit}
           >
             {sent ? (
               <div className="py-16 text-center">
                 <div className="font-display text-4xl text-foreground">Obrigado.</div>
-                <p className="text-muted-foreground mt-3">Seu convite chegou. Responderei em breve.</p>
+                <p className="text-muted-foreground mt-3">Seu convite foi aberto no WhatsApp — é só confirmar o envio por lá.</p>
               </div>
             ) : (
               <>
