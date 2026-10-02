@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StoreRouteImport } from './routes/store'
 import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
 import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
@@ -18,6 +19,11 @@ import { Route as ComunidadeRouteImport } from './routes/comunidade'
 import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StoreRoute = StoreRouteImport.update({
+  id: '/store',
+  path: '/store',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjetosRoute = ProjetosRouteImport.update({
   id: '/projetos',
   path: '/projetos',
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
+  '/store': typeof StoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
+  '/store': typeof StoreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
   '/projetos': typeof ProjetosRoute
+  '/store': typeof StoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
+    | '/store'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
+    | '/store'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/formacao-professores'
     | '/metodologias-ativas'
     | '/projetos'
+    | '/store'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,10 +144,18 @@ export interface RootRouteChildren {
   FormacaoProfessoresRoute: typeof FormacaoProfessoresRoute
   MetodologiasAtivasRoute: typeof MetodologiasAtivasRoute
   ProjetosRoute: typeof ProjetosRoute
+  StoreRoute: typeof StoreRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/store': {
+      id: '/store'
+      path: '/store'
+      fullPath: '/store'
+      preLoaderRoute: typeof StoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projetos': {
       id: '/projetos'
       path: '/projetos'
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   FormacaoProfessoresRoute: FormacaoProfessoresRoute,
   MetodologiasAtivasRoute: MetodologiasAtivasRoute,
   ProjetosRoute: ProjetosRoute,
+  StoreRoute: StoreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
