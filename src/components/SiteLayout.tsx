@@ -10,6 +10,7 @@ const nav = [
   { to: "/projetos", label: "Projetos" },
   { to: "/comunidade", label: "Comunidade" },
   { to: "/convites", label: "Convites" },
+  { to: "/store", label: "Store" },
 ] as const;
 
 export function SiteHeader() {
