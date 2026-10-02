@@ -54,6 +54,47 @@ function Page() {
           </div>
         </div>
 
+        {/* AF vs AS */}
+        <div className="mt-24 border-t border-border pt-12">
+          <div className="font-display text-xs tracking-wider text-primary">
+            <span className="text-muted-foreground">//</span> comparativo — AF vs AS
+          </div>
+          <h2 className="font-display text-2xl md:text-4xl font-bold mt-5 leading-tight">
+            Formativa <span className="text-primary">vs.</span> Somativa
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl text-sm leading-relaxed">
+            A Avaliação Formativa (AF) e a Avaliação Somativa (AS) respondem a perguntas diferentes.
+            Uma orienta o caminho; a outra registra a chegada.
+          </p>
+          <div className="mt-8 grid grid-cols-3 text-sm border border-border">
+            {["Dimensão", "Avaliação Formativa (AF)", "Avaliação Somativa (AS)"].map((h) => (
+              <div key={h} className="bg-foreground text-background p-4 font-medium uppercase text-[11px] tracking-[0.15em]">{h}</div>
+            ))}
+            {[
+              ["Propósito", "Acompanhar e reorientar a aprendizagem.", "Certificar e classificar o resultado."],
+              ["Momento", "Durante o percurso — contínua.", "Ao final do ciclo — pontual."],
+              ["Pergunta-chave", "Como seguir aprendendo?", "Quanto foi aprendido?"],
+              ["Feedback", "Descritivo, oportuno e acionável.", "Nota ou conceito, sem devolutiva."],
+              ["Nota", "Registro da jornada, nunca o fim.", "Síntese que entra no boletim."],
+              ["Erro", "Matéria-prima para replanejar.", "Penalidade a ser evitada."],
+              ["Quem avalia", "Professor e aluno, em parceria.", "Professor, sobre o aluno."],
+            ].map((row) =>
+              row.map((c, i) => (
+                <div
+                  key={row[0] + i}
+                  className={`p-4 border-t border-border ${i === 0 ? "font-medium bg-card text-foreground" : i === 1 ? "text-foreground bg-primary/5" : "text-muted-foreground"}`}
+                >
+                  {i === 1 && <span className="text-primary mr-1">›</span>}
+                  {c}
+                </div>
+              ))
+            )}
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground max-w-2xl leading-relaxed">
+            Na prática, <span className="text-foreground font-medium">elas se complementam</span>: a AF constrói a aprendizagem, e a AS registra o que ela produziu. O risco é inverter os papéis — quando a nota passa a guiar o processo, a avaliação deixa de ensinar.
+          </p>
+        </div>
+
         {/* RUBRICA SAMPLE */}
         <div className="mt-24 border-t border-border pt-12">
           <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Exemplo · Rubrica formativa</div>
