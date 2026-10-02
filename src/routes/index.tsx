@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { UserRound, Sparkles, ClipboardCheck, Rocket } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/")({
@@ -34,11 +35,12 @@ function Index() {
               </h1>
               <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Sou <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
-                Ciência, Tecnologia e Inovação. Minha atuação na Educação Profissional e Tecnológica (EPT) é guiada por uma certeza:
-                o aluno é o sujeito ativo da sua aprendizagem. À frente de projetos de multidesenvolvimento, crio caminhos práticos
-                que preparam estudantes do crescimento pessoal à construção de carreiras de impacto.
+                Ciência, Tecnologia e Inovação. Minha atuação na <strong className="text-foreground font-medium">Educação Profissional e Tecnológica (EPT)</strong> é guiada por uma certeza:
+                o <strong className="text-foreground font-medium">aluno é o sujeito ativo</strong> da sua aprendizagem. À frente de projetos de
+                <strong className="text-foreground font-medium">multidesenvolvimento</strong>, crio caminhos práticos que preparam estudantes do
+                crescimento pessoal à construção de <strong className="text-foreground font-medium">carreiras de impacto</strong>.
               </p>
-              <div className="mt-10 flex flex-wrap gap-3">
+              <div className="mt-14 lg:mt-16 flex flex-wrap gap-3">
                 <Link to="/convites" className="bg-primary text-primary-foreground px-7 py-4 text-[11px] font-display uppercase tracking-[0.18em] hover:bg-accent hover:text-accent-foreground transition-colors glow-sky">
                   Convites para eventos
                 </Link>
@@ -89,21 +91,24 @@ function Index() {
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4 md:sticky md:top-32 self-start">
               <div className="font-display text-xs tracking-wider text-primary">
-                <span className="text-muted-foreground">//</span> 02 — pilares
+                <span className="text-muted-foreground">//</span> 02 — ecossistema da aprendizagem
               </div>
               <h2 className="font-display text-3xl md:text-5xl font-bold mt-6 leading-tight">
-                Quatro princípios<br/>que orientam<br/><span className="text-primary">o trabalho.</span>
+                O Ecossistema<br/>da<br/><span className="text-primary">Aprendizagem.</span>
               </h2>
             </div>
             <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
               {[
-                { n: "01", t: "Aluno no centro", d: "Cada decisão pedagógica parte do contexto, do interesse e do ritmo de quem aprende.", off: "" },
-                { n: "02", t: "Metodologias ativas", d: "Sala de aula invertida, PBL, peer instruction e gamificação aplicadas ao cotidiano.", off: "sm:mt-12" },
-                { n: "03", t: "Avaliação formativa", d: "Avaliar para ensinar — feedback contínuo, devolutivas e rubricas transparentes.", off: "sm:-mt-12" },
-                { n: "04", t: "Tecnologia & carreira", d: "Inovação aplicada e desenvolvimento pessoal como eixos da formação.", off: "" },
+                { n: "01", t: "Aluno no centro", d: "Cada decisão pedagógica parte do contexto, do interesse e do ritmo de quem aprende.", icon: UserRound },
+                { n: "02", t: "Metodologias ativas", d: "Sala de aula invertida, PBL, peer instruction e gamificação aplicadas ao cotidiano.", icon: Sparkles },
+                { n: "03", t: "Avaliação formativa", d: "Avaliar para ensinar — feedback contínuo, devolutivas e rubricas transparentes.", icon: ClipboardCheck },
+                { n: "04", t: "Tecnologia & carreira", d: "Inovação aplicada e desenvolvimento pessoal como eixos da formação.", icon: Rocket },
               ].map((p) => (
-                <div key={p.n} className={`group bg-card border border-border p-8 hover:border-primary/60 transition-colors ${p.off}`}>
-                  <div className="font-display text-sm text-primary">{`[${p.n}]`}</div>
+                <div key={p.n} className="group bg-card border border-border p-8 hover:border-primary/60 transition-colors h-full">
+                  <div className="inline-flex items-center justify-center w-12 h-12 border border-primary/40 bg-primary/10 text-primary">
+                    <p.icon size={22} strokeWidth={1.5} />
+                  </div>
+                  <div className="font-display text-sm text-primary mt-5">{`[${p.n}]`}</div>
                   <h3 className="font-display text-xl font-bold mt-4 text-foreground">{p.t}</h3>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p.d}</p>
                   <div className="mt-6 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />

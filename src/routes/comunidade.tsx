@@ -58,20 +58,22 @@ function Page() {
           ))}
         </div>
 
-        <div className="mt-20 border border-primary/30 bg-primary/5 p-10 md:p-14 text-center">
-          <h2 className="font-display text-2xl md:text-3xl text-foreground">
-            QUERO SER PARTE
-          </h2>
-          <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Entre para o ecossistema e comece a interagir com outros pares [educadores multipotenciais].
-          </p>
-          <a
-            href="https://chat.whatsapp.com/CwvGn9kLCS046fhd5vc2D0"
-            className="inline-flex items-center gap-3 mt-8 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky"
-          >
-            ENTRAR NA COMUNIDADE
-            <ArrowRight size={16} />
-          </a>
+        <div className="mt-20 bg-gradient-to-r from-primary/50 via-primary/20 to-primary/50 p-px glow-sky">
+          <div className="bg-card p-10 md:p-14 text-center">
+            <h2 className="font-display text-2xl md:text-3xl text-foreground">
+              QUERO SER PARTE
+            </h2>
+            <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+              Entre para o ecossistema e comece a interagir com outros pares [educadores multipotenciais].
+            </p>
+            <a
+              href="https://chat.whatsapp.com/CwvGn9kLCS046fhd5vc2D0"
+              className="inline-flex items-center gap-3 mt-8 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              ENTRAR NO ECOSSISTEMA
+              <ArrowRight size={16} />
+            </a>
+          </div>
         </div>
       </PageShell>
     </SiteLayout>
