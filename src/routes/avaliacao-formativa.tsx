@@ -57,34 +57,34 @@ function Page() {
         {/* AF vs AS */}
         <div className="mt-24 border-t border-border pt-12">
           <div className="font-display text-xs tracking-wider text-primary">
-            <span className="text-muted-foreground">//</span> comparativo — AF vs AS
+            <span className="text-muted-foreground">//</span> comparativo — AS vs AF
           </div>
           <h2 className="font-display text-2xl md:text-4xl font-bold mt-5 leading-tight">
-            Formativa <span className="text-primary">vs.</span> Somativa
+            Somativa <span className="text-primary">vs.</span> Formativa
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl text-sm leading-relaxed">
-            A Avaliação Formativa (AF) e a Avaliação Somativa (AS) respondem a perguntas diferentes.
-            Uma orienta o caminho; a outra registra a chegada.
+            A Avaliação Somativa (AS) e a Avaliação Formativa (AF) respondem a perguntas diferentes.
+            Uma registra a chegada; a outra orienta o caminho.
           </p>
           <div className="mt-8 grid grid-cols-3 text-sm border border-border">
-            {["Dimensão", "Avaliação Formativa (AF)", "Avaliação Somativa (AS)"].map((h) => (
+            {["Dimensão", "Avaliação Somativa (AS)", "Avaliação Formativa (AF)"].map((h) => (
               <div key={h} className="bg-foreground text-background p-4 font-medium uppercase text-[11px] tracking-[0.15em]">{h}</div>
             ))}
             {[
-              ["Propósito", "Acompanhar e reorientar a aprendizagem.", "Certificar e classificar o resultado."],
-              ["Momento", "Durante o percurso — contínua.", "Ao final do ciclo — pontual."],
-              ["Pergunta-chave", "Como seguir aprendendo?", "Quanto foi aprendido?"],
-              ["Feedback", "Descritivo, oportuno e acionável.", "Nota ou conceito, sem devolutiva."],
-              ["Nota", "Registro da jornada, nunca o fim.", "Síntese que entra no boletim."],
-              ["Erro", "Matéria-prima para replanejar.", "Penalidade a ser evitada."],
-              ["Quem avalia", "Professor e aluno, em parceria.", "Professor, sobre o aluno."],
+              ["Propósito", "Certificar e classificar o resultado.", "Acompanhar e reorientar a aprendizagem."],
+              ["Momento", "Ao final do ciclo — pontual.", "Durante o percurso — contínua."],
+              ["Pergunta-chave", "Quanto foi aprendido?", "Como seguir aprendendo?"],
+              ["Feedback", "Nota ou conceito, sem devolutiva.", "Descritivo, oportuno e acionável."],
+              ["Nota", "Síntese que entra no boletim.", "Registro da jornada, nunca o fim."],
+              ["Erro", "Penalidade a ser evitada.", "Matéria-prima para replanejar."],
+              ["Quem avalia", "Professor, sobre o aluno.", "Professor e aluno, em parceria."],
             ].map((row) =>
               row.map((c, i) => (
                 <div
                   key={row[0] + i}
-                  className={`p-4 border-t border-border ${i === 0 ? "font-medium bg-card text-foreground" : i === 1 ? "text-foreground bg-primary/5" : "text-muted-foreground"}`}
+                  className={`p-4 border-t border-border ${i === 0 ? "font-medium bg-card text-foreground" : i === 2 ? "text-foreground bg-primary/5" : "text-muted-foreground"}`}
                 >
-                  {i === 1 && <span className="text-primary mr-1">›</span>}
+                  {i === 2 && <span className="text-primary mr-1">›</span>}
                   {c}
                 </div>
               ))
