@@ -158,7 +158,7 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
           <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
-            A melhor aula <span className="text-primary">não cabe no plano</span> —<br className="hidden md:block"/> ela <span className="text-primary">transborda</span> para a <span className="text-primary">vida do aluno</span>.
+            Só a <span className="text-primary">educação</span> transforma uma sociedade, e o único dessa mudança é o <span className="text-primary">professor</span>.
           </div>
           <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
