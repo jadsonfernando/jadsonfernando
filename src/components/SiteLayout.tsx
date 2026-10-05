@@ -5,6 +5,7 @@ import { Instagram, Linkedin, GraduationCap } from "lucide-react";
 const nav = [
   { to: "/", label: "Sobre" },
   { to: "/formacao-professores", label: "Formação" },
+  { to: "/praticas-pedagogicas", label: "Práticas Pedagógicas" },
   { to: "/metodologias-ativas", label: "Metodologias Ativas" },
   { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
   { to: "/projetos", label: "Projetos" },
