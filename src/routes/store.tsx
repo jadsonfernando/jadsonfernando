@@ -35,7 +35,7 @@ function Page() {
   return (
     <SiteLayout>
       <PageShell
-        kicker="05 — Store"
+        kicker="07 — Store"
         title="Tudo é treino."
         lede="O poder da metodologia da repetição — o livro em que a rotina disciplinada encontra a evolução real."
       >
