@@ -9,49 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as StoreRouteImport } from './routes/store'
-import { Route as ProjetosRouteImport } from './routes/projetos'
-import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
-import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
-import { Route as EventosRouteImport } from './routes/eventos'
-import { Route as ConvitesRouteImport } from './routes/convites'
-import { Route as ComunidadeRouteImport } from './routes/comunidade'
-import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AvaliacaoFormativaRouteImport } from './routes/avaliacao-formativa'
+import { Route as ComunidadeRouteImport } from './routes/comunidade'
+import { Route as ConvitesRouteImport } from './routes/convites'
+import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
+import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
+import { Route as ProjetosRouteImport } from './routes/projetos'
+import { Route as StoreRouteImport } from './routes/store'
 
-const StoreRoute = StoreRouteImport.update({
-  id: '/store',
-  path: '/store',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjetosRoute = ProjetosRouteImport.update({
-  id: '/projetos',
-  path: '/projetos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MetodologiasAtivasRoute = MetodologiasAtivasRouteImport.update({
-  id: '/metodologias-ativas',
-  path: '/metodologias-ativas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FormacaoProfessoresRoute = FormacaoProfessoresRouteImport.update({
-  id: '/formacao-professores',
-  path: '/formacao-professores',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventosRoute = EventosRouteImport.update({
-  id: '/eventos',
-  path: '/eventos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConvitesRoute = ConvitesRouteImport.update({
-  id: '/convites',
-  path: '/convites',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComunidadeRoute = ComunidadeRouteImport.update({
-  id: '/comunidade',
-  path: '/comunidade',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AvaliacaoFormativaRoute = AvaliacaoFormativaRouteImport.update({
@@ -59,9 +29,39 @@ const AvaliacaoFormativaRoute = AvaliacaoFormativaRouteImport.update({
   path: '/avaliacao-formativa',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ComunidadeRoute = ComunidadeRouteImport.update({
+  id: '/comunidade',
+  path: '/comunidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConvitesRoute = ConvitesRouteImport.update({
+  id: '/convites',
+  path: '/convites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosRoute = EventosRouteImport.update({
+  id: '/eventos',
+  path: '/eventos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormacaoProfessoresRoute = FormacaoProfessoresRouteImport.update({
+  id: '/formacao-professores',
+  path: '/formacao-professores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetodologiasAtivasRoute = MetodologiasAtivasRouteImport.update({
+  id: '/metodologias-ativas',
+  path: '/metodologias-ativas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosRoute = ProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoreRoute = StoreRouteImport.update({
+  id: '/store',
+  path: '/store',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -149,53 +149,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/store': {
-      id: '/store'
-      path: '/store'
-      fullPath: '/store'
-      preLoaderRoute: typeof StoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projetos': {
-      id: '/projetos'
-      path: '/projetos'
-      fullPath: '/projetos'
-      preLoaderRoute: typeof ProjetosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/metodologias-ativas': {
-      id: '/metodologias-ativas'
-      path: '/metodologias-ativas'
-      fullPath: '/metodologias-ativas'
-      preLoaderRoute: typeof MetodologiasAtivasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/formacao-professores': {
-      id: '/formacao-professores'
-      path: '/formacao-professores'
-      fullPath: '/formacao-professores'
-      preLoaderRoute: typeof FormacaoProfessoresRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/eventos': {
-      id: '/eventos'
-      path: '/eventos'
-      fullPath: '/eventos'
-      preLoaderRoute: typeof EventosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/convites': {
-      id: '/convites'
-      path: '/convites'
-      fullPath: '/convites'
-      preLoaderRoute: typeof ConvitesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/comunidade': {
-      id: '/comunidade'
-      path: '/comunidade'
-      fullPath: '/comunidade'
-      preLoaderRoute: typeof ComunidadeRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/avaliacao-formativa': {
@@ -205,11 +163,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AvaliacaoFormativaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/comunidade': {
+      id: '/comunidade'
+      path: '/comunidade'
+      fullPath: '/comunidade'
+      preLoaderRoute: typeof ComunidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/convites': {
+      id: '/convites'
+      path: '/convites'
+      fullPath: '/convites'
+      preLoaderRoute: typeof ConvitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos': {
+      id: '/eventos'
+      path: '/eventos'
+      fullPath: '/eventos'
+      preLoaderRoute: typeof EventosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formacao-professores': {
+      id: '/formacao-professores'
+      path: '/formacao-professores'
+      fullPath: '/formacao-professores'
+      preLoaderRoute: typeof FormacaoProfessoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metodologias-ativas': {
+      id: '/metodologias-ativas'
+      path: '/metodologias-ativas'
+      fullPath: '/metodologias-ativas'
+      preLoaderRoute: typeof MetodologiasAtivasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos': {
+      id: '/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/store': {
+      id: '/store'
+      path: '/store'
+      fullPath: '/store'
+      preLoaderRoute: typeof StoreRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
