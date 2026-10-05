@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as StoreRouteImport } from './routes/store'
 import { Route as ProjetosRouteImport } from './routes/projetos'
+import { Route as PraticasPedagogicasRouteImport } from './routes/praticas-pedagogicas'
 import { Route as MetodologiasAtivasRouteImport } from './routes/metodologias-ativas'
 import { Route as FormacaoProfessoresRouteImport } from './routes/formacao-professores'
 import { Route as EventosRouteImport } from './routes/eventos'
@@ -27,6 +28,11 @@ const StoreRoute = StoreRouteImport.update({
 const ProjetosRoute = ProjetosRouteImport.update({
   id: '/projetos',
   path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PraticasPedagogicasRoute = PraticasPedagogicasRouteImport.update({
+  id: '/praticas-pedagogicas',
+  path: '/praticas-pedagogicas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetodologiasAtivasRoute = MetodologiasAtivasRouteImport.update({
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/praticas-pedagogicas': typeof PraticasPedagogicasRoute
   '/projetos': typeof ProjetosRoute
   '/store': typeof StoreRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/praticas-pedagogicas': typeof PraticasPedagogicasRoute
   '/projetos': typeof ProjetosRoute
   '/store': typeof StoreRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/eventos': typeof EventosRoute
   '/formacao-professores': typeof FormacaoProfessoresRoute
   '/metodologias-ativas': typeof MetodologiasAtivasRoute
+  '/praticas-pedagogicas': typeof PraticasPedagogicasRoute
   '/projetos': typeof ProjetosRoute
   '/store': typeof StoreRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/eventos'
     | '/formacao-professores'
     | '/metodologias-ativas'
+    | '/praticas-pedagogicas'
     | '/projetos'
     | '/store'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/eventos'
     | '/formacao-professores'
     | '/metodologias-ativas'
+    | '/praticas-pedagogicas'
     | '/projetos'
     | '/store'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/eventos'
     | '/formacao-professores'
     | '/metodologias-ativas'
+    | '/praticas-pedagogicas'
     | '/projetos'
     | '/store'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   EventosRoute: typeof EventosRoute
   FormacaoProfessoresRoute: typeof FormacaoProfessoresRoute
   MetodologiasAtivasRoute: typeof MetodologiasAtivasRoute
+  PraticasPedagogicasRoute: typeof PraticasPedagogicasRoute
   ProjetosRoute: typeof ProjetosRoute
   StoreRoute: typeof StoreRoute
 }
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/projetos'
       fullPath: '/projetos'
       preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/praticas-pedagogicas': {
+      id: '/praticas-pedagogicas'
+      path: '/praticas-pedagogicas'
+      fullPath: '/praticas-pedagogicas'
+      preLoaderRoute: typeof PraticasPedagogicasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metodologias-ativas': {
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventosRoute: EventosRoute,
   FormacaoProfessoresRoute: FormacaoProfessoresRoute,
   MetodologiasAtivasRoute: MetodologiasAtivasRoute,
+  PraticasPedagogicasRoute: PraticasPedagogicasRoute,
   ProjetosRoute: ProjetosRoute,
   StoreRoute: StoreRoute,
 }
