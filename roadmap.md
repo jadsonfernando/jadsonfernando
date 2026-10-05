@@ -9,5 +9,5 @@
 - [x] Home: margem extra no CTA e negrito nas expressões-chave do texto de apoio.
 - [x] Seção "O Ecossistema da Aprendizagem": cards com altura igual e ícones em azul primário.
 - [x] Comunidade: container com borda em gradiente/brilho e botão "ENTRAR NO ECOSSISTEMA".
-- [ ] Atualizar página Projetos: renomear Soft Skills, adicionar Economia da Atenção, Agosto das Juventudes (2025-2026) e Semana Nacional de C&T (2 palestras)
+- [x] Atualizar página Projetos: renomear Soft Skills, adicionar Economia da Atenção, Agosto das Juventudes (2025-2026) e Semana Nacional de C&T (2 palestras)
 - [x] Criar menu Store com página do livro Tudo é Treino
