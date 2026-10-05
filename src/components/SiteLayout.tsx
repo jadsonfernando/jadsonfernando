@@ -1,13 +1,18 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
-import type { ReactNode } from "react";
-import { Instagram, Linkedin, GraduationCap } from "lucide-react";
+import { Fragment, type ReactNode } from "react";
+import { Instagram, Linkedin, GraduationCap, ChevronDown } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Sobre" },
   { to: "/formacao-professores", label: "Formação" },
-  { to: "/praticas-pedagogicas", label: "Práticas Pedagógicas" },
-  { to: "/metodologias-ativas", label: "Metodologias Ativas" },
-  { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
+  {
+    to: "/praticas-pedagogicas",
+    label: "Práticas Pedagógicas",
+    children: [
+      { to: "/metodologias-ativas", label: "Metodologias Ativas" },
+      { to: "/avaliacao-formativa", label: "Avaliação Formativa" },
+    ],
+  },
   { to: "/projetos", label: "Projetos" },
   { to: "/comunidade", label: "Comunidade" },
   { to: "/convites", label: "Convites" },
@@ -28,20 +33,39 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm">
           {nav.map((n) => {
-            const active = n.to === "/" ? path === "/" : path.startsWith(n.to);
+            const active = n.to === "/" ? path === "/" : path.startsWith(n.to) || !!n.children?.some((c) => path.startsWith(c.to));
             return (
-              <Link
-                key={n.to}
-                to={n.to}
-                className={`relative py-1 transition-colors hover:text-foreground uppercase tracking-wider text-[11px] ${
-                  active ? "text-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {n.label}
-                {active && (
-                  <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-primary glow-sky" />
+              <div key={n.to} className="relative group">
+                <Link
+                  to={n.to}
+                  className={`relative py-1 flex items-center gap-1.5 transition-colors hover:text-foreground uppercase tracking-wider text-[11px] ${
+                    active ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {n.label}
+                  {n.children && <ChevronDown size={12} className="transition-transform group-hover:rotate-180" />}
+                  {active && (
+                    <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-primary glow-sky" />
+                  )}
+                </Link>
+                {n.children && (
+                  <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div className="min-w-56 bg-card border border-border/60 py-2 glow-sky">
+                      {n.children.map((c) => (
+                        <Link
+                          key={c.to}
+                          to={c.to}
+                          className={`block px-5 py-2.5 text-[11px] uppercase tracking-wider transition-colors hover:bg-primary/10 hover:text-primary ${
+                            path.startsWith(c.to) ? "text-primary" : "text-muted-foreground"
+                          }`}
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 )}
-              </Link>
+              </div>
             );
           })}
         </nav>
@@ -49,18 +73,18 @@ export function SiteHeader() {
       {/* mobile nav */}
       <nav className="lg:hidden border-t border-border/50 overflow-x-auto">
         <div className="flex gap-5 px-6 py-3 text-xs whitespace-nowrap">
-          {nav.map((n) => {
-            const active = n.to === "/" ? path === "/" : path.startsWith(n.to);
-            return (
-              <Link
-                key={n.to}
-                to={n.to}
-                className={active ? "text-foreground" : "text-muted-foreground"}
-              >
+          {nav.map((n) => (
+            <Fragment key={n.to}>
+              <Link to={n.to} className={active(n.to) ? "text-foreground" : "text-muted-foreground"}>
                 {n.label}
               </Link>
-            );
-          })}
+              {n.children?.map((c) => (
+                <Link key={c.to} to={c.to} className={path.startsWith(c.to) ? "text-foreground" : "text-muted-foreground"}>
+                  ↳ {c.label}
+                </Link>
+              ))}
+            </Fragment>
+          ))}
         </div>
       </nav>
     </header>
@@ -83,7 +107,12 @@ export function SiteFooter() {
         <div className="space-y-2 text-muted-foreground">
           <div className="uppercase text-[11px] tracking-[0.2em] text-foreground mb-4">Navegar</div>
           {nav.slice(1).map((n) => (
-            <div key={n.to}><Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link></div>
+            <Fragment key={n.to}>
+              <div><Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link></div>
+              {n.children?.map((c) => (
+                <div key={c.to} className="pl-4"><Link to={c.to} className="hover:text-foreground transition-colors">{c.label}</Link></div>
+              ))}
+            </Fragment>
           ))}
         </div>
         <div className="space-y-3 text-muted-foreground">
