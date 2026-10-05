@@ -15,7 +15,10 @@ export const Route = createFileRoute("/projetos")({
 });
 
 const projetos = [
-  { y: "2026", t: "Soft Skills", k: "Formação", d: "O talento contrata, o comportamento promove: uma experiência imersiva que transforma comunicação, empatia e resiliência em vantagem competitiva real — a habilidade que nenhum algoritmo substitui." },
+  { y: "2026", t: "Soft Skills e o protagonismo estudantil", k: "Formação", d: "O talento contrata, o comportamento promove: uma experiência imersiva que transforma comunicação, empatia e resiliência em vantagem competitiva real — a habilidade que nenhum algoritmo substitui." },
+  { y: "2026", t: "Economia da Atenção", k: "Palestra", d: "Sua atenção é a moeda mais valiosa do século — e cada algoritmo disputa um pedaço dela. Uma experiência que expõe quem realmente lucra com a sua distração e mostra como retomar o controle do foco, transformando atenção em aprendizagem, presença e resultados." },
+  { y: "2025–2026", t: "Agosto das Juventudes", k: "Circuito de palestras", d: "Um circuito de palestras que colocou energia, voz e protagonismo na frente da juventude: tecnologia, propósito e futuro construído junto com quem está no começo da jornada — levando inspiração prática a escolas de todo o estado." },
+  { y: "2025", t: "Semana Nacional de Ciência & Tecnologia", k: "Palestras", d: "Duas palestras: “Consumo Inteligente e Renda Extra”, sobre transformar consumo consciente em oportunidade, e “Desative as notificações”, sobre o impacto dos algoritmos na performance escolar." },
   { y: "2025", t: "Trilha Carreira em Tech", k: "Mentoria", d: "Programa de mentoria coletiva para estudantes em transição da escola para o mercado de tecnologia." },
   { y: "2024", t: "Avaliar para Ensinar", k: "Formação docente", d: "Curso de formação continuada em avaliação formativa para redes públicas e privadas." },
   { y: "2024", t: "Sala Invertida·Br", k: "Pesquisa", d: "Estudo de caso sobre adoção de sala de aula invertida em escolas brasileiras de Ensino Médio." },
