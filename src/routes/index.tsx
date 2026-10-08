@@ -28,8 +28,8 @@ function Index() {
               <div className="font-display text-xs tracking-wider text-primary">
                 <span className="text-muted-foreground">//</span> 01 — sobre mim
               </div>
-              <h1 className="font-display text-[clamp(1.9rem,3.8vw,3.1rem)] font-bold leading-[1.12] mt-6 text-balance">
-                Só a <span className="text-primary text-glow">educação</span><br />
+              <h1 className="font-display text-[clamp(1.6rem,2.9vw,2.5rem)] font-bold leading-[1.2] mt-6 text-balance">
+                Só a <span className="text-primary text-glow">educação</span>{" "}
                 transforma uma sociedade, e o único agente desta mudança é o{" "}
                 <span className="text-primary text-glow">professor.</span>
               </h1>
