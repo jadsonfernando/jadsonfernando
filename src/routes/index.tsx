@@ -28,12 +28,12 @@ function Index() {
               <div className="font-display text-xs tracking-wider text-primary">
                 <span className="text-muted-foreground">//</span> 01 — sobre mim
               </div>
-              <h1 className="font-display text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[0.98] mt-8 text-balance">
+              <h1 className="font-display text-[clamp(1.9rem,3.8vw,3.1rem)] font-bold leading-[1.12] mt-6 text-balance">
                 Só a <span className="text-primary text-glow">educação</span><br />
                 transforma uma sociedade, e o único agente desta mudança é o{" "}
                 <span className="text-primary text-glow">professor.</span>
               </h1>
-              <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+              <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
                 Sou <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
                 Ciência, Tecnologia e Inovação. Minha atuação na <strong className="text-foreground font-medium">Educação Profissional e Tecnológica (EPT)</strong> é guiada por uma certeza:
                 o <strong className="text-foreground font-medium">aluno é o sujeito ativo</strong> da sua aprendizagem. À frente de projetos de <strong className="text-foreground font-medium">multidesenvolvimento</strong>, crio caminhos práticos que preparam estudantes do
