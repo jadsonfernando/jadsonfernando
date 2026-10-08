@@ -29,9 +29,9 @@ function Index() {
                 <span className="text-muted-foreground">//</span> 01 — sobre mim
               </div>
               <h1 className="font-display text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[0.98] mt-8 text-balance">
-                Ensinar é<br />
-                <span className="text-primary text-glow">despertar_</span><br />
-                não preencher.
+                Só a <span className="text-primary text-glow">educação</span><br />
+                transforma uma sociedade, e o único agente desta mudança é o{" "}
+                <span className="text-primary text-glow">professor.</span>
               </h1>
               <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Sou <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
@@ -158,7 +158,7 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
           <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
-            Só a <span className="text-primary">educação</span> transforma uma sociedade, e o único agente desta mudança é o <span className="text-primary">professor</span>.
+            A melhor aula <span className="text-primary">não cabe no plano</span> — ela <span className="text-primary">transborda</span> para a <span className="text-primary">vida do aluno</span>.
           </div>
           <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
