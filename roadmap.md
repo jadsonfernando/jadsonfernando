@@ -11,3 +11,4 @@
 - [x] Comunidade: container com borda em gradiente/brilho e botão "ENTRAR NO ECOSSISTEMA".
 - [x] Atualizar página Projetos: renomear Soft Skills, adicionar Economia da Atenção, Agosto das Juventudes (2025-2026) e Semana Nacional de C&T (2 palestras)
 - [x] Criar menu Store com página do livro Tudo é Treino
+- [ ] Consolidar todo o conteúdo de Metodologias Ativas e Avaliação Formativa em Práticas Pedagógicas, preservando a introdução atual e removendo os menus separados.
