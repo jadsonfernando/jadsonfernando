@@ -158,7 +158,7 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 lg:px-12 py-24 text-center">
           <div className="font-display text-2xl md:text-4xl font-bold leading-snug text-balance">
-            Só a <span className="text-primary">educação</span> transforma uma sociedade, e o único dessa mudança é o <span className="text-primary">professor</span>.
+            Só a <span className="text-primary">educação</span> transforma uma sociedade, e o único agente desta mudança é o <span className="text-primary">professor</span>.
           </div>
           <div className="font-display text-xs tracking-wider text-muted-foreground mt-8">— jadson.fernando</div>
         </div>
