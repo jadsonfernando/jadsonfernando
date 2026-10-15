@@ -114,8 +114,8 @@ function Page() {
           </div>
         </div>
 
-        {/* Livros 2 e 3 */}
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-12 mt-24">
+        {/* Livros 2, 3 e 4 */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-12 mt-24">
           {[
             {
               cover: coverStorytelling,
@@ -138,6 +138,17 @@ function Page() {
               desc: "Teoria sem método é apenas intenção. Aqui, o autor traduz sala de aula invertida, aprendizagem baseada em problemas, peer instruction e gamificação em processos claros, passo a passo — um guia nobre e prático para professores e gestores que querem tirar as metodologias ativas do discurso e colocar na prática.",
               tags: "Método · Processo · Prática",
               wa: "Olá, quero garantir o meu exemplar do livro MÉTODOS E PROCESSOS do Prof. Jadson Fernando.",
+            },
+            {
+              cover: coverBrinde,
+              vol: "04",
+              alt: "Livro Um brinde à mudança — diferentes formas de enxergar e processar o mundo, de Jadson Fernando Langkammer",
+              title: "UM BRINDE À MUDANÇA",
+              subtitle: "diferentes formas de enxergar e processar o mundo",
+              icon: Eye,
+              desc: "A mudança raramente começa no mundo — começa no olhar. Nesta belíssima obra sobre mentalidade, Jadson Fernando Langkammer convida o leitor a brindar à própria transformação: enxergar os mesmos fatos por novos ângulos, processar as experiências com mais consciência e converter cada recomeço em vantagem.",
+              tags: "Mentalidade · Perspectiva · Transformação",
+              wa: "Olá, quero garantir o meu exemplar do livro UM BRINDE À MUDANÇA do Prof. Jadson Fernando.",
             },
           ].map((b) => (
             <div key={b.vol} className="group bg-card border border-border p-7 lg:p-9 flex flex-col hover:border-primary/60 transition-colors">
