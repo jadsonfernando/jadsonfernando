@@ -172,6 +172,9 @@ function Page() {
               <h3 className="font-display text-2xl lg:text-3xl font-bold mt-4 text-foreground leading-tight">
                 {b.title} — <span className="text-primary">{b.subtitle}</span>
               </h3>
+              <div className="text-sm text-muted-foreground mt-2">
+                por <span className="text-foreground font-medium">Jadson F O M Langkammer</span>
+              </div>
               <p className="text-muted-foreground mt-4 leading-relaxed text-sm lg:text-base flex-1">{b.desc}</p>
               <div className="text-xs text-muted-foreground mt-6 flex items-center gap-2">
                 <b.icon size={14} className="text-primary" />
