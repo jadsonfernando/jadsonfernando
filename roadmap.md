@@ -12,5 +12,5 @@
 - [x] Atualizar página Projetos: renomear Soft Skills, adicionar Economia da Atenção, Agosto das Juventudes (2025-2026) e Semana Nacional de C&T (2 palestras)
 - [x] Criar menu Store com página do livro Tudo é Treino
 - [x] Consolidar todo o conteúdo de Metodologias Ativas e Avaliação Formativa em Práticas Pedagógicas, preservando a introdução atual e removendo os menus separados.
-- [ ] Home: título do Sobre em tamanho mais harmônico com a foto.
-- [ ] Store: símbolo de marca registrada após o nome e 3 livros — Metodologia da Repetição (descrição preservada), Storytelling [48 histórias para transformar a sua mentalidade] e Métodos e Processos [Como aplicar Metodologias Ativas].
+- [x] Home: título do Sobre em tamanho mais harmônico com a foto.
+- [x] Store: símbolo de marca registrada após o nome e 3 livros — Metodologia da Repetição (descrição preservada), Storytelling [48 histórias para transformar a sua mentalidade] e Métodos e Processos [Como aplicar Metodologias Ativas].
