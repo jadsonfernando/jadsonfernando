@@ -133,7 +133,7 @@ function Page() {
               alt: "Livro Métodos e Processos — como aplicar metodologias ativas, de Jadson Fernando Langkammer",
               title: "MÉTODOS E PROCESSOS",
               subtitle: "como aplicar metodologias ativas",
-              icon: Route,
+              icon: RouteIcon,
               desc: "Teoria sem método é apenas intenção. Aqui, o autor traduz sala de aula invertida, aprendizagem baseada em problemas, peer instruction e gamificação em processos claros, passo a passo — um guia nobre e prático para professores e gestores que querem tirar as metodologias ativas do discurso e colocar na prática.",
               tags: "Método · Processo · Prática",
               wa: "Olá, quero garantir o meu exemplar do livro MÉTODOS E PROCESSOS do Prof. Jadson Fernando.",
@@ -159,7 +159,7 @@ function Page() {
               </h3>
               <p className="text-muted-foreground mt-4 leading-relaxed text-sm lg:text-base flex-1">{b.desc}</p>
               <div className="text-xs text-muted-foreground mt-6 flex items-center gap-2">
-                <RouteIcon size={14} className="text-primary" />
+                <b.icon size={14} className="text-primary" />
                 {b.tags}
               </div>
               <div className="mt-6">
