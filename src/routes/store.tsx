@@ -1,15 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
-import { BookOpen, Repeat, ArrowRight } from "lucide-react";
-import bookCover from "@/assets/livro-tudo-e-treino.png";
+import { ArrowRight, BookOpen, Repeat, Quote, Route as RouteIcon } from "lucide-react";
+import coverRepeticao from "@/assets/livro-metodologia-da-repeticao.png";
+import coverStorytelling from "@/assets/livro-storytelling.png";
+import coverMetodos from "@/assets/livro-metodos-e-processos.png";
 
 export const Route = createFileRoute("/store")({
   head: () => ({
     meta: [
       { title: "Store — Jadson Fernando" },
-      { name: "description", content: "TUDO É TREINO — o poder da metodologia da repetição, de Jadson Fernando Langkammer." },
-      { property: "og:title", content: "Store — Tudo é Treino, de Jadson Fernando Langkammer" },
-      { property: "og:description", content: "O poder da metodologia da repetição — garanta o seu exemplar." },
+      { name: "description", content: "Tudo é treino® — a coleção de livros do Prof. Jadson Fernando Langkammer: Metodologia da Repetição, Storytelling e Métodos e Processos." },
+      { property: "og:title", content: "Store — Tudo é treino®, livros de Jadson Fernando Langkammer" },
+      { property: "og:description", content: "Metodologia da Repetição, Storytelling e Métodos e Processos — garanta o seu exemplar." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -18,52 +20,53 @@ export const Route = createFileRoute("/store")({
   component: Page,
 });
 
-const pilares = [
-  {
-    icon: Repeat,
-    t: "A metodologia da repetição",
-    d: "Por que repetir não é decoreba: é como o cérebro consolida competências e transforma prática em maestria.",
-  },
-  {
-    icon: BookOpen,
-    t: "Da rotina ao resultado",
-    d: "Processo, constância e mentalidade aplicados à aprendizagem, à carreira e ao desenvolvimento pessoal.",
-  },
-];
+const waLink = (msg: string) =>
+  `https://wa.me/5533987138346?text=${encodeURIComponent(msg)}`;
+
+function CtaButton({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      className="inline-flex items-center justify-center gap-3 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky whitespace-nowrap"
+    >
+      {label}
+      <ArrowRight size={16} />
+    </a>
+  );
+}
 
 function Page() {
   return (
     <SiteLayout>
       <PageShell
         kicker="07 — Store"
-        title="Tudo é treino."
-        lede="O poder da metodologia da repetição — o livro em que a rotina disciplinada encontra a evolução real."
+        title="Tudo é treino®"
+        lede="A coleção de livros do Prof. Jadson Fernando — método, mentalidade e prática para transformar rotina em resultado."
       >
+        {/* Livro 1 — destaque */}
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Livro */}
           <div className="lg:col-span-5 relative">
             <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
             <img
-              src={bookCover}
-              alt="Livro Tudo é Treino — o poder da metodologia da repetição, de Jadson Fernando Langkammer"
+              src={coverRepeticao}
+              alt="Livro Metodologia da Repetição — o poder da metodologia da repetição, de Jadson Fernando Langkammer"
               className="w-full border border-border"
               width={1024}
-              height={1024}
+              height={1536}
               loading="eager"
             />
             <div className="absolute -bottom-5 -left-5 bg-card border border-border px-5 py-4 glow-sky">
-              <div className="font-display text-[10px] text-primary">{"{ titulo: \"tudo_e_treino\" }"}</div>
+              <div className="font-display text-[10px] text-primary">{"{ volume: \"01\" }"}</div>
               <div className="text-xs text-muted-foreground mt-1">Repetição · Constância · Evolução</div>
             </div>
           </div>
 
-          {/* Produto */}
           <div className="lg:col-span-7 space-y-6">
             <div className="font-display text-xs tracking-wider text-muted-foreground">
-              <span className="text-primary">{"{"}</span> lancamento {"}"}
+              <span className="text-primary">{"{"}</span> volume 01 <span className="text-primary">{"}"}</span>
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-              TUDO É TREINO — <span className="text-primary">o poder da metodologia da repetição</span>
+              METODOLOGIA DA REPETIÇÃO — <span className="text-primary">o poder da metodologia da repetição</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Neste livro, Jadson Fernando Langkammer mostra que grandes resultados raramente nascem de
@@ -73,7 +76,18 @@ function Page() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              {pilares.map((p) => (
+              {[
+                {
+                  icon: Repeat,
+                  t: "A metodologia da repetição",
+                  d: "Por que repetir não é decoreba: é como o cérebro consolida competências e transforma prática em maestria.",
+                },
+                {
+                  icon: BookOpen,
+                  t: "Da rotina ao resultado",
+                  d: "Processo, constância e mentalidade aplicados à aprendizagem, à carreira e ao desenvolvimento pessoal.",
+                },
+              ].map((p) => (
                 <div key={p.t} className="bg-card border border-border p-7">
                   <div className="inline-flex items-center justify-center w-11 h-11 border border-primary/40 bg-primary/10 text-primary">
                     <p.icon size={20} strokeWidth={1.5} />
@@ -91,15 +105,68 @@ function Page() {
                   Fale com a minha assistente, reserve o seu e combine o envio.
                 </p>
               </div>
-              <a
-                href="https://wa.me/5533987138346?text=Ol%C3%A1%2C%20quero%20garantir%20o%20meu%20exemplar%20do%20livro%20TUDO%20%C3%89%20TREINO%20do%20Prof.%20Jadson%20Fernando."
-                className="inline-flex items-center justify-center gap-3 border border-primary/40 bg-primary/10 text-primary px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-medium hover:bg-primary hover:text-primary-foreground transition-colors glow-sky whitespace-nowrap"
-              >
-                QUERO O MEU EXEMPLAR
-                <ArrowRight size={16} />
-              </a>
+              <CtaButton
+                href={waLink("Olá, quero garantir o meu exemplar do livro METODOLOGIA DA REPETIÇÃO do Prof. Jadson Fernando.")}
+                label="Quero o meu exemplar"
+              />
             </div>
           </div>
+        </div>
+
+        {/* Livros 2 e 3 */}
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-12 mt-24">
+          {[
+            {
+              cover: coverStorytelling,
+              vol: "02",
+              alt: "Livro Storytelling — 48 histórias para transformar a sua mentalidade, de Jadson Fernando Langkammer",
+              title: "STORYTELLING",
+              subtitle: "48 histórias para transformar a sua mentalidade",
+              icon: Quote,
+              desc: "Histórias não servem apenas para entreter: reprogramam. Neste livro, Jadson Fernando Langkammer reúne 48 narrativas curtas que desmontam crenças limitantes, ampliam o repertório e ensinam o leitor a enxergar sentido — e oportunidade — onde antes havia apenas rotina.",
+              tags: "Repertório · Mentalidade · Narrativa",
+              wa: "Olá, quero garantir o meu exemplar do livro STORYTELLING do Prof. Jadson Fernando.",
+            },
+            {
+              cover: coverMetodos,
+              vol: "03",
+              alt: "Livro Métodos e Processos — como aplicar metodologias ativas, de Jadson Fernando Langkammer",
+              title: "MÉTODOS E PROCESSOS",
+              subtitle: "como aplicar metodologias ativas",
+              icon: RouteIcon,
+              desc: "Teoria sem método é apenas intenção. Aqui, o autor traduz sala de aula invertida, aprendizagem baseada em problemas, peer instruction e gamificação em processos claros, passo a passo — um guia nobre e prático para professores e gestores que querem tirar as metodologias ativas do discurso e colocar na prática.",
+              tags: "Método · Processo · Prática",
+              wa: "Olá, quero garantir o meu exemplar do livro MÉTODOS E PROCESSOS do Prof. Jadson Fernando.",
+            },
+          ].map((b) => (
+            <div key={b.vol} className="group bg-card border border-border p-7 lg:p-9 flex flex-col hover:border-primary/60 transition-colors">
+              <div className="relative">
+                <div className="absolute -inset-2 border border-primary/30 translate-x-2 translate-y-2" />
+                <img
+                  src={b.cover}
+                  alt={b.alt}
+                  className="relative w-full border border-border"
+                  width={1024}
+                  height={1536}
+                  loading="lazy"
+                />
+              </div>
+              <div className="font-display text-xs tracking-wider text-primary mt-10">
+                <span className="text-muted-foreground">{"{"}</span> volume {b.vol} <span className="text-muted-foreground">{"}"}</span>
+              </div>
+              <h3 className="font-display text-2xl lg:text-3xl font-bold mt-4 text-foreground leading-tight">
+                {b.title} — <span className="text-primary">{b.subtitle}</span>
+              </h3>
+              <p className="text-muted-foreground mt-4 leading-relaxed text-sm lg:text-base flex-1">{b.desc}</p>
+              <div className="text-xs text-muted-foreground mt-6 flex items-center gap-2">
+                <b.icon size={14} className="text-primary" />
+                {b.tags}
+              </div>
+              <div className="mt-6">
+                <CtaButton href={waLink(b.wa)} label="Quero o meu exemplar" />
+              </div>
+            </div>
+          ))}
         </div>
       </PageShell>
     </SiteLayout>
