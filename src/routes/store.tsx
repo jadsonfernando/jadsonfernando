@@ -1,17 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
-import { ArrowRight, BookOpen, Repeat, Quote, Route as RouteIcon } from "lucide-react";
+import { ArrowRight, BookOpen, Repeat, Quote, Route as RouteIcon, Eye } from "lucide-react";
 import coverRepeticao from "@/assets/livro-metodologia-da-repeticao.png";
 import coverStorytelling from "@/assets/livro-storytelling.png";
 import coverMetodos from "@/assets/livro-metodos-e-processos.png";
+import coverBrinde from "@/assets/livro-um-brinde-a-mudanca.png";
 
 export const Route = createFileRoute("/store")({
   head: () => ({
     meta: [
       { title: "Store — Jadson Fernando" },
-      { name: "description", content: "Tudo é treino® — a coleção de livros do Prof. Jadson Fernando Langkammer: Metodologia da Repetição, Storytelling e Métodos e Processos." },
-      { property: "og:title", content: "Store — Tudo é treino®, livros de Jadson Fernando Langkammer" },
-      { property: "og:description", content: "Metodologia da Repetição, Storytelling e Métodos e Processos — garanta o seu exemplar." },
+      { name: "description", content: "A coleção de livros do Prof. Jadson Fernando Langkammer: Metodologia da Repetição, Storytelling, Métodos e Processos e Um brinde à mudança." },
+      { property: "og:title", content: "Store — livros de Jadson Fernando Langkammer" },
+      { property: "og:description", content: "Metodologia da Repetição, Storytelling, Métodos e Processos e Um brinde à mudança — garanta o seu exemplar." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -40,7 +41,7 @@ function Page() {
     <SiteLayout>
       <PageShell
         kicker="07 — Store"
-        title="Tudo é treino®"
+        title="Biblioteca."
         lede="A coleção de livros do Prof. Jadson Fernando — método, mentalidade e prática para transformar rotina em resultado."
       >
         {/* Livro 1 — destaque */}
