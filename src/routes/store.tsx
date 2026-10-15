@@ -159,7 +159,7 @@ function Page() {
               </h3>
               <p className="text-muted-foreground mt-4 leading-relaxed text-sm lg:text-base flex-1">{b.desc}</p>
               <div className="text-xs text-muted-foreground mt-6 flex items-center gap-2">
-                <b.icon size={14} className="text-primary" />
+                <RouteIcon size={14} className="text-primary" />
                 {b.tags}
               </div>
               <div className="mt-6">
