@@ -69,6 +69,9 @@ function Page() {
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
               METODOLOGIA DA REPETIÇÃO — <span className="text-primary">o poder da metodologia da repetição</span>
             </h2>
+            <div className="text-sm text-muted-foreground">
+              por <span className="text-foreground font-medium">Jadson F O M Langkammer</span>
+            </div>
             <p className="text-muted-foreground leading-relaxed">
               Neste livro, Jadson Fernando Langkammer mostra que grandes resultados raramente nascem de
               grandes acidentes: nascem de pequenas repetições bem orientadas. Uma leitura prática para
