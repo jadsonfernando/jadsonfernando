@@ -67,7 +67,7 @@ function Page() {
               <span className="text-primary">{"{"}</span> volume 01 <span className="text-primary">{"}"}</span>
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-              METODOLOGIA DA REPETIÇÃO — <span className="text-primary">o poder da metodologia da repetição</span>
+              METODOLOGIA DA REPETIÇÃO
             </h2>
             <div className="text-sm text-muted-foreground">
               por <span className="text-foreground font-medium">Jadson F O M Langkammer</span>
