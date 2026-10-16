@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
-import { ArrowRight, BookOpen, Repeat, Quote, Route as RouteIcon, Eye } from "lucide-react";
+import { ArrowRight, Repeat, Quote, Route as RouteIcon, Eye } from "lucide-react";
 import coverRepeticao from "@/assets/livro-metodologia-da-repeticao.png";
 import coverStorytelling from "@/assets/livro-storytelling.png";
 import coverMetodos from "@/assets/livro-metodos-e-processos.png";
