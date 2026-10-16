@@ -50,7 +50,7 @@ function Page() {
             <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
             <img
               src={coverRepeticao}
-              alt="Livro Metodologia da Repetição — o poder da metodologia da repetição, de Jadson Fernando Langkammer"
+              alt="Livro Metodologia da Repetição, de Jadson F O M Langkammer"
               className="w-full border border-border"
               width={1024}
               height={1536}
