@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageShell } from "@/components/SiteLayout";
 import { ArrowRight, Repeat, Route as RouteIcon } from "lucide-react";
-import coverRepeticao from "@/assets/livro-metodologia-da-repeticao.png";
 import coverMetodos from "@/assets/livro-metodos-e-processos.png";
+import coverRepeticao from "@/assets/livro-metodologia-da-repeticao.png";
 
 export const Route = createFileRoute("/store")({
   head: () => ({
