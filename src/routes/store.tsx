@@ -47,19 +47,8 @@ function Page() {
         <div className="grid md:grid-cols-2 gap-10 lg:gap-12 max-w-4xl">
           {[
             {
-              cover: coverRepeticao,
-              vol: "01",
-              alt: `Livro Metodologia da Repetição, de ${AUTOR}`,
-              title: "METODOLOGIA DA REPETIÇÃO",
-              subtitle: "",
-              icon: Repeat,
-              desc: "Grandes resultados raramente nascem de grandes acidentes: nascem de pequenas repetições bem orientadas. Uma leitura prática para estudantes, professores e profissionais que querem transformar disciplina em competência — e competência em carreira.",
-              tags: "Repetição · Constância · Evolução",
-              wa: "Olá, quero garantir o meu exemplar do livro METODOLOGIA DA REPETIÇÃO do Prof. Jadson Fernando.",
-            },
-            {
               cover: coverMetodos,
-              vol: "02",
+              vol: "01",
               alt: `Livro Métodos e Processos — Metodologias Ativas aplicada, de ${AUTOR}`,
               title: "MÉTODOS E PROCESSOS",
               subtitle: "Metodologias Ativas aplicada",
@@ -67,6 +56,17 @@ function Page() {
               desc: "Teoria sem método é apenas intenção. Aqui, o autor traduz sala de aula invertida, aprendizagem baseada em problemas, peer instruction e gamificação em processos claros, passo a passo — um guia nobre e prático para professores e gestores que querem tirar as metodologias ativas do discurso e colocar na prática.",
               tags: "Método · Processo · Prática",
               wa: "Olá, quero garantir o meu exemplar do livro MÉTODOS E PROCESSOS do Prof. Jadson Fernando.",
+            },
+            {
+              cover: coverRepeticao,
+              vol: "02",
+              alt: `Livro Metodologia da Repetição, de ${AUTOR}`,
+              title: "METODOLOGIA DA REPETIÇÃO",
+              subtitle: "",
+              icon: Repeat,
+              desc: "Grandes resultados raramente nascem de grandes acidentes: nascem de pequenas repetições bem orientadas. Uma leitura prática para estudantes, professores e profissionais que querem transformar disciplina em competência — e competência em carreira.",
+              tags: "Repetição · Constância · Evolução",
+              wa: "Olá, quero garantir o meu exemplar do livro METODOLOGIA DA REPETIÇÃO do Prof. Jadson Fernando.",
             },
           ].map((b) => (
             <article key={b.vol} className="group bg-card border border-border p-6 lg:p-7 flex flex-col hover:border-primary/60 transition-colors">
