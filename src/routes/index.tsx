@@ -93,7 +93,7 @@ function Index() {
                 <span className="text-muted-foreground">//</span> 02 — ecossistema da aprendizagem
               </div>
               <h2 className="font-display text-3xl md:text-5xl font-bold mt-6 leading-tight">
-                O Ecossistema<br/>da<br/><span className="text-primary">Aprendizagem.</span>
+                Ecossistema da <span className="text-primary">Aprendizagem</span>
               </h2>
             </div>
             <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
