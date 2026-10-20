@@ -49,7 +49,7 @@ function Page() {
       <PageShell
         kicker="06 — Convites"
         title="Contrate uma experiência transformadora."
-        lede="Escolha o formato e conte o contexto — eu cuido do resto: conteúdo sob medida, entrega impecável e impacto que fica. Respondo pessoalmente em até dois dias úteis."
+        lede="Escolha o formato e conte o contexto — eu cuido do resto: conteúdo sob medida, entrega impecável e impacto que fica."
       >
         <div className="grid md:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* FORMATOS */}
