@@ -36,7 +36,7 @@ function Index() {
               </h1>
               <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
                 <strong className="text-foreground font-medium">Jadson Fernando Langkammer</strong>, professor do núcleo de
-                Ciência, Tecnologia e Inovação tem atuação consolidada na <strong className="text-foreground font-medium">Educação Profissional e Tecnológica (EPT)</strong>. O <strong className="text-foreground font-medium">estudante e o seu protagonismo</strong> norteiam o centro da sua metodologia. À frente de projetos de <strong className="text-foreground font-medium">multidesenvolvimento</strong>, crio caminhos práticos que preparam estudantes do
+                Ciência, Tecnologia e Inovação tem atuação consolidada na <strong className="text-foreground font-medium">Educação Profissional e Tecnológica (EPT)</strong>. O <strong className="text-foreground font-medium">estudante e o seu protagonismo</strong> norteiam o centro da sua metodologia. À frente de projetos de <strong className="text-foreground font-medium">multidesenvolvimento</strong>, cria caminhos práticos que preparam estudantes do
                 crescimento pessoal à construção de <strong className="text-foreground font-medium">carreiras de impacto</strong>.
               </p>
               <div className="mt-14 lg:mt-16 flex flex-wrap gap-3">
