@@ -35,34 +35,37 @@
 
 :root {
   --radius: 0.25rem;
-  /* Professional Navy palette — deep navy base, electric blue accents */
-  --navy-950: #0a1628;
-  --navy-900: #0f2744;
-  --navy-800: #1e3a5f;
-  --navy-700: #2a4a73;
-  --sky: #3b82f6;
-  --cyan-ice: #e0f2fe;
-  --steel: #93c5fd;
+  /* Charcoal base with warm brown accents inspired by the portrait. */
+  --charcoal: oklch(0.19 0.005 65);
+  --charcoal-raised: oklch(0.235 0.008 65);
+  --warm-surface: oklch(0.29 0.015 65);
+  --warm-border: oklch(0.38 0.025 65);
+  --shirt-brown: oklch(0.73 0.078 65);
+  --warm-light: oklch(0.93 0.018 75);
+  --warm-muted: oklch(0.77 0.023 75);
+  --grid-line: color-mix(in oklab, var(--warm-border) 35%, transparent);
+  --accent-halo: color-mix(in oklab, var(--primary) 25%, transparent);
+  --text-halo: color-mix(in oklab, var(--primary) 45%, transparent);
 
-  --background: var(--navy-950);
-  --foreground: #f0f9ff;
-  --card: var(--navy-900);
+  --background: var(--charcoal);
+  --foreground: var(--warm-light);
+  --card: var(--charcoal-raised);
   --card-foreground: var(--foreground);
-  --popover: var(--navy-900);
+  --popover: var(--charcoal-raised);
   --popover-foreground: var(--foreground);
-  --primary: var(--sky);
-  --primary-foreground: var(--navy-950);
-  --secondary: var(--navy-800);
+  --primary: var(--shirt-brown);
+  --primary-foreground: var(--charcoal);
+  --secondary: var(--warm-surface);
   --secondary-foreground: var(--foreground);
-  --muted: var(--navy-800);
-  --muted-foreground: var(--steel);
-  --accent: var(--cyan-ice);
-  --accent-foreground: var(--navy-950);
-  --destructive: #ef4444;
+  --muted: var(--warm-surface);
+  --muted-foreground: var(--warm-muted);
+  --accent: var(--warm-light);
+  --accent-foreground: var(--charcoal);
+  --destructive: oklch(0.64 0.21 25);
   --destructive-foreground: var(--foreground);
-  --border: var(--navy-700);
-  --input: var(--navy-700);
-  --ring: var(--sky);
+  --border: var(--warm-border);
+  --input: var(--warm-border);
+  --ring: var(--shirt-brown);
 
   --font-display: "JetBrains Mono", ui-monospace, monospace;
   --font-serif: "JetBrains Mono", ui-monospace, monospace;
@@ -84,8 +87,8 @@
     letter-spacing: -0.03em;
   }
   ::selection {
-    background-color: var(--sky);
-    color: var(--navy-950);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
   }
 }
 
@@ -94,14 +97,14 @@
   /* fine circuit grid */
   .grain {
     background-image:
-      linear-gradient(rgb(42 74 115 / 0.22) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(42 74 115 / 0.22) 1px, transparent 1px);
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .glow-sky {
-    box-shadow: 0 0 24px rgb(59 130 246 / 0.25);
+    box-shadow: 0 0 24px var(--accent-halo);
   }
   .text-glow {
-    text-shadow: 0 0 18px rgb(59 130 246 / 0.45);
+    text-shadow: 0 0 18px var(--text-halo);
   }
 }
