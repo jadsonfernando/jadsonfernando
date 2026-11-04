@@ -35,37 +35,37 @@
 
 :root {
   --radius: 0.25rem;
-  /* Charcoal base with warm brown accents inspired by the portrait. */
-  --charcoal: oklch(0.19 0.005 65);
-  --charcoal-raised: oklch(0.235 0.008 65);
-  --warm-surface: oklch(0.29 0.015 65);
-  --warm-border: oklch(0.38 0.025 65);
-  --shirt-brown: oklch(0.73 0.078 65);
-  --warm-light: oklch(0.93 0.018 75);
-  --warm-muted: oklch(0.77 0.023 75);
-  --grid-line: color-mix(in oklab, var(--warm-border) 35%, transparent);
+  /* Neutral grayscale palette: graphite, silver and soft white. */
+  --charcoal: oklch(0.19 0 0);
+  --charcoal-raised: oklch(0.235 0 0);
+  --neutral-surface: oklch(0.29 0 0);
+  --neutral-border: oklch(0.38 0 0);
+  --silver: oklch(0.79 0 0);
+  --soft-white: oklch(0.95 0 0);
+  --neutral-muted: oklch(0.74 0 0);
+  --grid-line: color-mix(in oklab, var(--neutral-border) 35%, transparent);
   --accent-halo: color-mix(in oklab, var(--primary) 25%, transparent);
   --text-halo: color-mix(in oklab, var(--primary) 45%, transparent);
 
   --background: var(--charcoal);
-  --foreground: var(--warm-light);
+  --foreground: var(--soft-white);
   --card: var(--charcoal-raised);
   --card-foreground: var(--foreground);
   --popover: var(--charcoal-raised);
   --popover-foreground: var(--foreground);
-  --primary: var(--shirt-brown);
+  --primary: var(--silver);
   --primary-foreground: var(--charcoal);
-  --secondary: var(--warm-surface);
+  --secondary: var(--neutral-surface);
   --secondary-foreground: var(--foreground);
-  --muted: var(--warm-surface);
-  --muted-foreground: var(--warm-muted);
-  --accent: var(--warm-light);
+  --muted: var(--neutral-surface);
+  --muted-foreground: var(--neutral-muted);
+  --accent: var(--soft-white);
   --accent-foreground: var(--charcoal);
   --destructive: oklch(0.64 0.21 25);
   --destructive-foreground: var(--foreground);
-  --border: var(--warm-border);
-  --input: var(--warm-border);
-  --ring: var(--shirt-brown);
+  --border: var(--neutral-border);
+  --input: var(--neutral-border);
+  --ring: var(--silver);
 
   --font-display: "JetBrains Mono", ui-monospace, monospace;
   --font-serif: "JetBrains Mono", ui-monospace, monospace;
