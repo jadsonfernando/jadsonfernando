@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Harmonizar a nova foto com a paleta cinza usando um efeito suave, sem alterar a imagem original.
+- [x] Harmonizar a nova foto com a paleta cinza usando um efeito suave, sem alterar a imagem original.
 
 - [x] Substituir a foto principal pelo retrato enviado, ajustar o enquadramento e incluir cópia pública para hospedagem na Vercel.
 
