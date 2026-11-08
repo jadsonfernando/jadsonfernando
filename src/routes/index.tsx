@@ -73,7 +73,7 @@ function Index() {
                   image.src = "/jadson-retrato-jaqueta.jpg";
                 }}
                 alt="Prof. Jadson Fernando"
-                className="w-full aspect-[3/4] object-cover object-bottom"
+                className="w-full aspect-[3/4] object-cover object-bottom grayscale-[0.85] contrast-[0.95] brightness-[0.95]"
                 loading="eager"
               />
               <div className="absolute -bottom-5 -left-5 bg-card border border-border px-5 py-4 glow-sky">
