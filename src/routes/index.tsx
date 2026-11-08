@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { UserRound, Sparkles, ClipboardCheck, Rocket } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
-import fotoPrincipal from "@/assets/jadson-foto-principal.jpg.asset.json";
+import fotoPrincipal from "@/assets/jadson-retrato-jaqueta.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -10,6 +10,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Sobre o Prof. Jadson Fernando: educação centrada no aluno, metodologias ativas e avaliação formativa." },
       { property: "og:title", content: "Jadson Fernando — Professor de Tecnologia" },
       { property: "og:description", content: "Educação centrada no aluno, metodologias ativas e avaliação formativa." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -50,12 +52,18 @@ function Index() {
             </div>
 
             {/* Foto quebrando a coluna — sobrepõe o texto no desktop */}
-            <div className="lg:col-span-5 relative lg:-ml-16 lg:mt-16 z-0">
+            <div className="lg:col-span-5 relative lg:mt-16 z-0">
               <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
               <img
                 src={fotoPrincipal.url}
+                onError={(event) => {
+                  const image = event.currentTarget;
+                  if (image.dataset.fallback) return;
+                  image.dataset.fallback = "true";
+                  image.src = "/jadson-retrato-jaqueta.jpg";
+                }}
                 alt="Prof. Jadson Fernando"
-                className="w-full aspect-[3/4] object-cover grayscale-[0.2] contrast-[1.05]"
+                className="w-full aspect-[3/4] object-cover object-bottom"
                 loading="eager"
               />
               <div className="absolute -bottom-5 -left-5 bg-card border border-border px-5 py-4 glow-sky">

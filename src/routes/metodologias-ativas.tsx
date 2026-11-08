@@ -8,6 +8,8 @@ export const Route = createFileRoute("/metodologias-ativas")({
       { name: "description", content: "Sala de aula invertida, PBL, peer instruction, gamificação e outras estratégias centradas no aluno." },
       { property: "og:title", content: "Metodologias Ativas — Jadson Fernando" },
       { property: "og:description", content: "Estratégias práticas para colocar o aluno no centro." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/metodologias-ativas" }],
   }),

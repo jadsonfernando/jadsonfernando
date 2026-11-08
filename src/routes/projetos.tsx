@@ -8,6 +8,8 @@ export const Route = createFileRoute("/projetos")({
       { name: "description", content: "Projetos educacionais, pesquisas e iniciativas em tecnologia, inovação e formação docente." },
       { property: "og:title", content: "Projetos — Jadson Fernando" },
       { property: "og:description", content: "Projetos e iniciativas em educação e tecnologia." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/projetos" }],
   }),

@@ -8,6 +8,8 @@ export const Route = createFileRoute("/formacao-professores")({
       { name: "description", content: "Formações, oficinas e trilhas de desenvolvimento docente com foco em metodologias ativas, avaliação formativa e IA na educação." },
       { property: "og:title", content: "Formação Professores — Jadson Fernando" },
       { property: "og:description", content: "Trilhas de desenvolvimento docente com metodologias ativas, avaliação formativa e IA na educação." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: FormacaoProfessores,
