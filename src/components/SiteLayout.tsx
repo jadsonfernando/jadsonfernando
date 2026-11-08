@@ -32,7 +32,7 @@ export function SiteHeader() {
                 key={n.to}
                 to={n.to}
                 className={`relative py-1 transition-colors hover:text-foreground uppercase tracking-wider text-[11px] ${
-                  active ? "text-foreground" : "text-muted-foreground"
+                  active ? "text-primary font-semibold" : "text-primary"
                 }`}
               >
                 {n.label}
@@ -47,7 +47,7 @@ export function SiteHeader() {
         <div className="flex gap-5 px-6 py-3 text-xs whitespace-nowrap">
           {nav.map((n) => {
             const active = n.to === "/" ? path === "/" : path.startsWith(n.to);
-            return <Link key={n.to} to={n.to} className={active ? "text-foreground" : "text-muted-foreground"}>{n.label}</Link>;
+            return <Link key={n.to} to={n.to} className={`transition-colors hover:text-foreground ${active ? "text-primary font-semibold" : "text-primary"}`}>{n.label}</Link>;
           })}
         </div>
       </nav>
@@ -71,7 +71,7 @@ export function SiteFooter() {
         <div className="space-y-2 text-muted-foreground">
           <div className="uppercase text-[11px] tracking-[0.2em] text-foreground mb-4">Navegar</div>
           {nav.slice(1).map((n) => (
-            <div key={n.to}><Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link></div>
+            <div key={n.to}><Link to={n.to} className="text-primary hover:text-foreground transition-colors">{n.label}</Link></div>
           ))}
         </div>
         <div className="space-y-3 text-muted-foreground">
