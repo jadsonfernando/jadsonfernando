@@ -10,6 +10,8 @@ export const Route = createFileRoute("/convites")({
       { name: "description", content: "Convide o Prof. Jadson Fernando para palestras, formações, mentorias e bancas." },
       { property: "og:title", content: "Convites — Jadson Fernando" },
       { property: "og:description", content: "Contrate palestras, formações e mentorias sob medida." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/convites" }],
   }),

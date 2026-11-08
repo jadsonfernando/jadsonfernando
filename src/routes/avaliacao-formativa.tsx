@@ -8,6 +8,8 @@ export const Route = createFileRoute("/avaliacao-formativa")({
       { name: "description", content: "Avaliar para ensinar: feedback contínuo, rubricas e devolutivas que transformam a aprendizagem." },
       { property: "og:title", content: "Avaliação Formativa — Jadson Fernando" },
       { property: "og:description", content: "Avaliação como instrumento de aprendizagem, não de classificação." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/avaliacao-formativa" }],
   }),

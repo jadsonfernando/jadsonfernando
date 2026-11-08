@@ -8,6 +8,8 @@ export const Route = createFileRoute("/eventos")({
       { name: "description", content: "Agenda de palestras, formações e eventos do Prof. Jadson Fernando." },
       { property: "og:title", content: "Eventos — Jadson Fernando" },
       { property: "og:description", content: "Próximas palestras e formações." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/eventos" }],
   }),
