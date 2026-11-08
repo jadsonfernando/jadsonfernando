@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { UserRound, Sparkles, ClipboardCheck, Rocket } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import fotoPrincipal from "@/assets/jadson-retrato-jaqueta.jpg.asset.json";
+import { useEffect, useRef } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +20,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const portraitRef = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    const image = portraitRef.current;
+    if (image?.complete && image.naturalWidth === 0) {
+      image.dataset.fallback = "true";
+      image.src = "/jadson-retrato-jaqueta.jpg";
+    }
+  }, []);
   return (
     <SiteLayout>
       {/* HERO — broken grid: texto deslocado, foto sobreposta, stats flutuando */}
@@ -55,6 +64,7 @@ function Index() {
             <div className="lg:col-span-5 relative lg:mt-16 z-0">
               <div className="absolute -inset-3 border border-primary/40 translate-x-3 translate-y-3" />
               <img
+                ref={portraitRef}
                 src={fotoPrincipal.url}
                 onError={(event) => {
                   const image = event.currentTarget;
